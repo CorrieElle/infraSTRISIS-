@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service | infraSTRISIS Labs™</title>
+<link rel="icon" type="image/png" href="/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0d0d0d;
+    --bone: #141414;
+    --forest: #2E6B4F;
+    --forest-mid: #3d8a65;
+    --forest-light: #1a2e24;
+    --gold: #C8932A;
+    --gold-light: #1e1608;
+    --steel: #1A3A5C;
+    --steel-light: #0f1e2e;
+    --warm-gray: #111111;
+    --mid-gray: #999;
+    --rule: #2a2a2a;
+    --white: #ffffff;
+    --text-primary: #f0f0f0;
+    --text-secondary: #b8b8b8;
+    --text-muted: #909090;
+    --card-bg: #1a1a1a;
+    --card-border: #2a2a2a;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--ink);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* HEADER */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13, 13, 13, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .header-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+
+  nav {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+  }
+
+  nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+
+  nav a:hover {
+    color: var(--white);
+  }
+
+  .btn-nav {
+    background: var(--forest);
+    color: var(--white);
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+
+  .btn-nav:hover {
+    background: var(--forest-mid);
+  }
+
+  /* MAIN CONTENT */
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 32px 120px;
+  }
+
+  .page-hero {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .page-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    color: var(--white);
+  }
+
+  .page-hero .last-updated {
+    font-size: 14px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* TERMS CONTENT */
+  .terms-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .terms-section {
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .terms-section:last-child {
+    border-bottom: none;
+  }
+
+  .terms-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--white);
+  }
+
+  .terms-section h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    color: var(--forest-mid);
+  }
+
+  .terms-section p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.8;
+  }
+
+  .terms-section ul,
+  .terms-section ol {
+    margin-left: 24px;
+    margin-bottom: 16px;
+  }
+
+  .terms-section li {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+    line-height: 1.7;
+  }
+
+  .terms-section strong {
+    color: var(--white);
+    font-weight: 600;
+  }
+
+  .highlight-box {
+    background: linear-gradient(135deg, var(--forest-light), var(--steel-light));
+    border-left: 3px solid var(--forest);
+    padding: 24px;
+    margin: 24px 0;
+    border-radius: 4px;
+  }
+
+  .highlight-box p {
+    color: var(--white);
+    margin-bottom: 0;
+  }
+
+  .contact-box {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 32px;
+    text-align: center;
+    margin-top: 48px;
+  }
+
+  .contact-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: var(--white);
+  }
+
+  .contact-box a {
+    color: var(--forest-mid);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+
+  .contact-box a:hover {
+    color: var(--gold);
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--bone);
+    border-top: 1px solid var(--rule);
+    padding: 48px 40px;
+  }
+
+  .footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+
+  .footer-brand {
+    flex: 1 1 200px;
+  }
+
+  .footer-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  footer nav {
+    flex: 1 1 auto;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  footer nav a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+
+  footer nav a:hover {
+    color: var(--white);
+  }
+
+  .footer-contact {
+    flex: 1 1 200px;
+    text-align: right;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  .footer-contact a {
+    color: var(--forest-mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-contact a:hover {
+    color: var(--gold);
+  }
+
+  @media (max-width: 768px) {
+    .header-inner,
+    .footer-inner {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    footer nav {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .footer-contact {
+      text-align: center;
+    }
+
+    .page-hero h1 {
+      font-size: 36px;
+    }
+
+    main {
+      padding: 60px 24px 80px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header role="banner">
+  <div class="header-inner">
+    <a href="/" class="logo"><img src="/favicon.png" alt="" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;"><span style="color: #3d8a65;">infra</span>STRISIS Labs<span style="color: #C8932A;">™</span></a>
+    <nav aria-label="Main navigation">
+      <a href="/#problem">The Problem</a>
+      <a href="/services">Services</a>
+      <a href="/#about">About</a>
+      <a href="mailto:info@infrastrisis.com" class="btn-nav">Intake Paused</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-hero">
+    <h1>Terms of Service</h1>
+    <p class="last-updated">Last Updated: March 8, 2026</p>
+  </div>
+
+  <div class="terms-content">
+
+    <section class="terms-section">
+      <h2>1. Agreement to Terms</h2>
+      <p>These Terms of Service ("Terms") govern your use of services provided by <strong>Corrie Al Momani, operating as a sole proprietorship under the brand infraSTRISIS™</strong> ("we," "us," "Steward").</p>
+      <p>By purchasing a Diagnostic Session or Crisis Infrastructure Sprint, you ("Client," "you") agree to be bound by these Terms. If you do not agree, do not book services or submit payment.</p>
+    </section>
+
+    <section class="terms-section">
+      <h2>2. Service Scope & Definitions</h2>
+      <p>infraSTRISIS™ provides crisis infrastructure stewardship through two service lines:</p>
+      
+      <h3>A. Diagnostic Session</h3>
+      <p>A 60-90 minute phone consultation that maps the hidden operational fractures inside your organizational crisis. You receive written analysis (the "Crisis Infrastructure Brief"), not implementation support.</p>
+      
+      <h3>B. Crisis Infrastructure Sprint (By Engagement Only)</h3>
+      <p>A 4-8 week implementation engagement available only to eligible clients who have completed a Diagnostic Session. Sprint work requires a separate, custom Scope of Work and Agreement. Pricing begins at $7,500 and is determined based on structural complexity identified during the Diagnostic.</p>
+      
+      <div class="highlight-box">
+        <p><strong>What This Is Not:</strong> Crisis management or firefighting • Coaching on office politics or board relations • Legal, financial, HR, or medical advice • Emergency response services • One-size-fits-all solutions</p>
+      </div>
+    </section>
+
+    <section class="terms-section">
+      <h2>3. Eligibility Requirements</h2>
+      <p>Services are tiered based on organizational structure. By booking, you confirm you meet the requirements for your selected tier:</p>
+      
+      <h3>Solo Founders ($1,497 Diagnostic)</h3>
+      <ul>
+        <li>Diagnostic Session only</li>
+        <li>Sprint work available only if you can afford Small Nonprofit tier or higher ($7,500+)</li>
+      </ul>
+      
+      <h3>Small Nonprofits ($2,997 Diagnostic)</h3>
+      <ul>
+        <li>Must be fully funded and legally compliant</li>
+        <li>Must be able to provide organizational documentation</li>
+      </ul>
+      
+      <h3>Mid-Size Organizations ($4,997 Diagnostic)</h3>
+      <ul>
+        <li>Must designate 1 representative with authority to answer questions OR direct access to decision-maker</li>
+      </ul>
+      
+      <h3>Enterprise ($9,997 Diagnostic)</h3>
+      <ul>
+        <li>Must designate 2 representatives at different authority levels for contingency planning</li>
+      </ul>
+      
+      <p><strong>Steward reserves the right to decline any engagement that does not meet eligibility requirements, even after payment is received.</strong> In such cases, a full refund will be issued.</p>
+    </section>
+
+    <section class="terms-section">
+      <h2>4. The Diagnostic Process</h2>
+      
+      <h3>Phase 0: Pre-Work Submission</h3>
+      <p>After booking your Diagnostic Session via Calendly, you will receive pre-work instructions. You must submit the following to <strong>corrie@infrastrisis.com</strong>:</p>
+      
+      <p><strong>Required:</strong></p>
+      <ul>
+        <li>Crisis Narrative (3 pages maximum): What's breaking, what triggered it, what success looks like</li>
+        <li>Organizational Structure (1 document): Who reports to whom (org chart, list, or narrative)</li>
+        <li>Attempted Solutions (1 page): What you've already tried and what happened</li>
+      </ul>
+      
+      <p><strong>Optional:</strong></p>
+      <ul>
+        <li>2-minute video walkthrough</li>
+        <li>Up to 3 supporting documents (recent communications, existing SOPs, budget constraints)</li>
+      </ul>
+      
+      <div class="highlight-box">
+        <p><strong>Hard Limits:</strong> Maximum 3 pages per document • Maximum 3 documents total for reference materials • No "library dumps" accepted</p>
+        <p style="margin-top: 16px;"><strong>Deadline:</strong> Pre-work must be received 5 business days before your scheduled Diagnostic call. Failure to submit pre-work by this deadline results in automatic session cancellation with no refund.</p>
+      </div>
+      
+      <h3>Phase 1: Live Diagnostic Session</h3>
+      <ul>
+        <li><strong>Duration:</strong> 60-90 minutes</li>
+        <li><strong>Format:</strong> Phone call (not video)</li>
+        <li><strong>Your Role:</strong> Answer questions, clarify context, map decision-making structures</li>
+        <li><strong>Our Role:</strong> Identify structural fractures (not symptoms), map leverage points</li>
+      </ul>
+      <p>You will receive a verbal debrief during the call and a confirmation email within 24 hours.</p>
+      
+      <h3>Phase 2: Written Analysis Delivery</h3>
+      <p>Within <strong>3-4 business days</strong> of your Diagnostic call, you will receive your <strong>Crisis Infrastructure Brief</strong> via email (PDF format).</p>
+      
+      <p><strong>The Brief includes:</strong></p>
+      <ul>
+        <li>Crisis map (visual representation of fractures)</li>
+        <li>3-5 structural problems identified</li>
+        <li>3-5 recommended interventions (ranked by complexity/impact)</li>
+        <li>Actionable path forward (what you can do immediately without Sprint work)</li>
+        <li>Contingency plans</li>
+        <li>Sprint preview (if applicable)</li>
+      </ul>
+    </section>
+
+    <section class="terms-section">
+      <h2>5. Sprint Work (Separate Agreement Required)</h2>
+      <p><strong>These Terms cover Diagnostic Sessions only.</strong></p>
+      <p>If Sprint work is recommended during your Diagnostic, you will receive a separate Sprint Proposal Outline within 48 hours of receiving your Brief. Sprint engagements require:</p>
+      <ul>
+        <li>A separate, custom Scope of Work and Agreement</li>
+        <li>Commitment to 4-8 weeks of implementation support</li>
+        <li>Weekly check-ins with a designated point person</li>
+        <li>Pre-agreed checkpoints and deliverables</li>
+      </ul>
+      <p><strong>Sprint work is not guaranteed.</strong> The Steward reserves the right to decline Sprint engagements based on capacity constraints, complexity misalignment, or client readiness.</p>
+    </section>
+
+    <section class="terms-section">
+      <h2>6. Payment Terms & No-Refund Policy</h2>
+      <p><strong>All payments are processed through Stripe and are non-refundable under the following conditions:</strong></p>
+      <ul>
+        <li><strong>Once payment is captured, it is final.</strong> No refunds for change of mind, scheduling conflicts, or dissatisfaction with analysis.</li>
+        <li><strong>If pre-work is not submitted 5 business days prior to your scheduled call, your session is automatically canceled and your fee is forfeited.</strong></li>
+        <li><strong>Rescheduling is permitted once only, with at least 48 hours notice.</strong></li>
+      </ul>
+      <div class="highlight-box">
+        <p><strong>Exception:</strong> If the Steward must cancel due to emergency or unforeseen circumstances, you will receive either priority rescheduling to the next available slot, OR full refund at Steward's discretion.</p>
+      </div>
+      <p><strong>Sprint payments follow separate terms outlined in the Sprint Agreement.</strong></p>
+    </section>
+
+    <section class="terms-section">
+      <h2>7. Cancellation & Rescheduling</h2>
+      
+      <h3>Client-Initiated Cancellations:</h3>
+      <ul>
+        <li><strong>More than 48 hours before scheduled call:</strong> One-time reschedule permitted (no refund)</li>
+        <li><strong>Less than 48 hours before scheduled call:</strong> Session forfeited, no refund, no reschedule</li>
+      </ul>
+      
+      <h3>Client-Initiated Rescheduling:</h3>
+      <ul>
+        <li>Permitted <strong>once</strong> with at least 48 hours notice</li>
+        <li>Second reschedule request = session forfeited, no refund</li>
+      </ul>
+      
+      <h3>Steward-Initiated Cancellations:</h3>
+      <ul>
+        <li>You will be notified immediately</li>
+        <li>You will receive priority rescheduling or full refund at Steward's discretion</li>
+      </ul>
+    </section>
+
+    <section class="terms-section">
+      <h2>8. Capacity Limits</h2>
+      <p>infraSTRISIS™ operates under strict capacity constraints to maintain diagnostic quality:</p>
+      <ul>
+        <li><strong>Maximum 2 Diagnostic Sessions per week</strong></li>
+        <li><strong>No more than 1 Sprint engagement at a time</strong></li>
+      </ul>
+      <p><strong>Steward reserves the right to decline bookings if capacity is full</strong>, even if Calendly shows availability. In such cases, you will be notified within 24 hours of booking and offered priority access to the next available slot or a full refund.</p>
+    </section>
+
+    <section class="terms-section">
+      <h2>9. Intellectual Property</h2>
+      
+      <h3>Your Materials:</h3>
+      <p>You retain all rights to materials you submit (crisis narratives, org charts, supporting documents).</p>
+      
+      <h3>Our Methodology:</h3>
+      <p>The infraSTRISIS™ framework, Crisis Infrastructure Brief format, templates, maps, and analytical methodology are proprietary to Corrie Al Momani and protected by common law trademark and copyright.</p>
+      
+      <h3>Your License:</h3>
+      <p>You receive a non-exclusive, non-transferable license to use your specific Crisis Infrastructure Brief and any Sprint deliverables for internal organizational purposes only. You may not:</p>
+      <ul>
+        <li>Reproduce the framework, templates, or methodology for use with other organizations</li>
+        <li>Resell, redistribute, or sublicense any deliverables</li>
+        <li>Claim authorship of the infraSTRISIS™ methodology</li>
+      </ul>
+      
+      <h3>Case Studies & Teaching:</h3>
+      <p>Anonymous, de-identified elements of your engagement may be used for teaching purposes, case studies, or methodology refinement. Specific organizational details will not be disclosed without your explicit written permission.</p>
+    </section>
+
+    <section class="terms-section">
+      <h2>10. Confidentiality & Data Handling</h2>
+      
+      <h3>What We Protect:</h3>
+      <p>All materials you submit and all information shared during Diagnostic and Sprint sessions are treated as confidential and will not be disclosed to third parties without your permission.</p>
+      
+      <h3>How We Store Data:</h3>
+      <ul>
+        <li>Client materials are stored securely in Google Workspace</li>
+        <li>Materials are retained for <strong>90 days post-engagement</strong> to allow for Sprint proposals and follow-up</li>
+        <li>After 90 days, materials are permanently deleted from active storage</li>
+      </ul>
+      
+      <h3>Your Rights:</h3>
+      <p>You may request immediate deletion of your files upon completion of your Diagnostic Session by emailing <strong>corrie@infrastrisis.com</strong>.</p>
+      
+      <h3>Your Responsibilities:</h3>
+      <p>You assume standard risks of transmitting files via email and digital platforms. We recommend you do not include:</p>
+      <ul>
+        <li>Social Security numbers</li>
+        <li>Credit card information</li>
+        <li>Protected health information (PHI) unless absolutely necessary</li>
+        <li>Information subject to attorney-client privilege</li>
+      </ul>
+      
+      <h3>No NDAs Required:</h3>
+      <p>Standard confidentiality is included in these Terms. If you require a separate Non-Disclosure Agreement, you are responsible for providing and paying for legal review of such agreement.</p>
+    </section>
+
+    <section class="terms-section">
+      <h2>11. Limitation of Liability & Disclaimers</h2>
+      
+      <h3>No Guarantees of Outcomes:</h3>
+      <p>infraSTRISIS™ provides analysis, mapping, and strategic recommendations. We do not guarantee:</p>
+      <ul>
+        <li>Resolution of your organizational crisis</li>
+        <li>Specific financial, operational, or personnel outcomes</li>
+        <li>Prevention of future crises</li>
+        <li>Success of any implementation you undertake</li>
+      </ul>
+      
+      <h3>Your Implementation Responsibility:</h3>
+      <p>You are solely responsible for decisions made based on our analysis. We provide structural insight, not directives.</p>
+      
+      <h3>Not Professional Advice:</h3>
+      <p>Our services are crisis infrastructure consulting, not:</p>
+      <ul>
+        <li>Legal advice (consult an attorney)</li>
+        <li>Financial advice (consult a CPA or financial advisor)</li>
+        <li>HR advice (consult an employment lawyer or HR professional)</li>
+        <li>Medical or mental health advice (consult a licensed professional)</li>
+      </ul>
+      
+      <h3>Limitation of Damages:</h3>
+      <p>To the fullest extent permitted by Texas law, Corrie Al Momani's total liability for any claim arising from these services shall not exceed the amount you paid for the specific service giving rise to the claim.</p>
+      
+      <h3>No Liability for Third-Party Tools:</h3>
+      <p>We use third-party platforms (Calendly, Stripe, Google Workspace, email). We are not responsible for:</p>
+      <ul>
+        <li>Service outages or technical failures</li>
+        <li>Data breaches at third-party vendors</li>
+        <li>Payment processing errors</li>
+      </ul>
+    </section>
+
+    <section class="terms-section">
+      <h2>12. Dispute Resolution</h2>
+      
+      <h3>Informal Resolution:</h3>
+      <p>Before initiating any formal proceeding, you agree to contact us at <strong>corrie@infrastrisis.com</strong> to attempt informal resolution.</p>
+      
+      <h3>Mediation:</h3>
+      <p>If informal resolution fails, disputes will be submitted to mediation in Texas before proceeding to arbitration.</p>
+      
+      <h3>Binding Arbitration:</h3>
+      <p>Any dispute that cannot be resolved through mediation shall be resolved through binding arbitration in Texas under the rules of the American Arbitration Association. Each party bears their own costs.</p>
+      
+      <h3>No Class Actions:</h3>
+      <p>You agree to resolve disputes on an individual basis only. No class action lawsuits or class-wide arbitration permitted.</p>
+    </section>
+
+    <section class="terms-section">
+      <h2>13. Governing Law</h2>
+      <p>These Terms are governed by the laws of the <strong>State of Texas</strong>, without regard to conflict of law principles. Any arbitration or court proceeding must take place in Texas.</p>
+    </section>
+
+    <section class="terms-section">
+      <h2>14. Modifications to Terms</h2>
+      <p>We reserve the right to update these Terms at any time. Changes will be posted on this page with an updated "Last Updated" date.</p>
+      
+      <h3>Your Continued Use:</h3>
+      <p>Booking a new service after Terms have been updated constitutes acceptance of the new Terms.</p>
+      
+      <h3>Existing Engagements:</h3>
+      <p>Changes to Terms do not apply retroactively to services already booked or in progress.</p>
+    </section>
+
+    <section class="terms-section">
+      <h2>15. Entire Agreement</h2>
+      <p>These Terms, together with any separate Sprint Agreement you enter into, constitute the entire agreement between you and Corrie Al Momani regarding infraSTRISIS™ services.</p>
+    </section>
+
+    <div class="contact-box">
+      <h3>Questions About These Terms?</h3>
+      <p style="margin-bottom: 24px;">For questions about these Terms of Service, use the button below to send a direct message.</p>
+      <a href="mailto:info@infrastrisis.com" style="display: inline-block; background: var(--forest); color: var(--white); padding: 12px 28px; border-radius: 4px; text-decoration: none; font-weight: 600; transition: background 0.2s;">Send a Direct Message</a>
+    </div>
+
+  </div>
+</main>
+
+<footer role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-logo"><img src="/favicon.png" alt="" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;"><span style="color: #3d8a65;">infra</span>STRISIS Labs<span style="color: #C8932A;">™</span></span>
+    </div>
+    <nav aria-label="Footer navigation">
+      <a href="/#problem">The Problem</a>
+      <a href="/services">Services</a>
+      <a href="/#about">About</a>
+      <a href="mailto:info@infrastrisis.com">Contact</a>
+    </nav>
+    <div class="footer-contact">
+      © 2026 infraSTRISIS Labs™
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
