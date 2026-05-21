@@ -333,6 +333,58 @@
     color: var(--white);
   }
 
+  /* SUBSECTION STYLES FOR THE AGENT MODEL */
+  .subsection-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 32px;
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: 768px) {
+    .subsection-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .touchpoint-box {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 32px;
+  }
+
+  .touchpoint-box h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--white);
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 10px;
+  }
+
+  .touchpoint-list {
+    list-style: none;
+  }
+
+  .touchpoint-list li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .touchpoint-list li::before {
+    content: "•";
+    color: var(--gold);
+    font-size: 20px;
+    position: absolute;
+    left: 0;
+    top: -4px;
+  }
+
   /* CTA SECTION */
   .cta-section {
     background: linear-gradient(135deg, var(--forest-light), var(--steel-light));
@@ -498,61 +550,61 @@
 
 <main>
   <div class="page-hero">
-    <h1>Services</h1>
-    <p class="tagline">Crisis infrastructure stewardship designed to repair what's breaking before your mission and your people collapse.</p>
+    <h1>Services &amp; Tiers</h1>
+    <p class="tagline">Crisis infrastructure stewardship designed to identify and repair hidden structural fractures within systems, organizations, and families.</p>
   </div>
 
   <div class="promise-box">
-    <p>infraSTRISIS™ repairs the hidden structures inside your crisis so your mission and your people do not break.</p>
+    <p>Our open-access family navigation resources remain 100% free at <a href="https://corrieelle.org" style="color: var(--white); text-decoration: underline;">corrieelle.org</a>. For organizations and families with means seeking deep, high-touch consultation, we offer structured, agent-assisted advisory services below.</p>
   </div>
 
   <!-- DIAGNOSTIC SESSION -->
   <section class="service-section">
     <div class="section-header">
       <h2>infraSTRISIS™ Diagnostic Session</h2>
-      <p>A structured, high-impact analysis using the infraSTRISIS™ methodology. Built on 15+ years of cross-industry People Ops, governance, and federal compliance expertise. You get the skeptic's view and the operator's truth before the fracture costs you everything.</p>
+      <p>Delivered through agent-assisted analysis with human synthesis. AI handles deep background research, documentation drafting, and pattern recognition, allowing the Steward to focus on expert-led strategic guidance and quality control. Most clients receive their Crisis Infrastructure Brief within <strong>3-4 business days</strong>. Simpler cases may deliver in 2-3 days, while highly complex organizational or family situations may require 5-7 days.</p>
     </div>
 
     <div class="tier-grid">
-      <!-- SOLO FOUNDERS -->
+      <!-- DEDICATED FAMILY ADVOCACY -->
       <div class="tier-card">
-        <h3>Solo Founders</h3>
+        <h3>Family Advocacy</h3>
         <div class="tier-price">$1,497</div>
         
         <div class="tier-detail">
           <div class="tier-label">You Receive</div>
-          <div class="tier-content">2-page Crisis Infrastructure Brief + actionable checklist within 3-4 days</div>
+          <div class="tier-content">Custom Strategic Roadmap + actionable navigation steps within 3-4 days</div>
         </div>
 
         <div class="tier-detail">
           <div class="tier-label">You Submit</div>
-          <div class="tier-content">3-page crisis narrative + org structure + what you've tried</div>
+          <div class="tier-content">3-page family context brief + systems/barriers encountered + current safe markers</div>
         </div>
 
         <div class="tier-detail">
-          <div class="tier-label">I Do</div>
-          <div class="tier-content">Map your fractures, identify 3-5 structural problems, propose fixes you can execute</div>
+          <div class="tier-label">Steward Stewardship</div>
+          <div class="tier-content">Our foundational resources at corrieelle.org remain 100% free for families without income. This tier is for families with means who need dedicated 1:1 strategic partnership and complex systems navigation.</div>
         </div>
       </div>
 
-      <!-- SMALL NONPROFITS -->
+      <!-- SMALL ORGS & FOUNDERS -->
       <div class="tier-card">
-        <h3>Small Nonprofits</h3>
+        <h3>Small Orgs &amp; Founders</h3>
         <div class="tier-price">$2,997</div>
         
         <div class="tier-detail">
           <div class="tier-label">You Receive</div>
-          <div class="tier-content">Crisis Infrastructure Brief + Sprint preview (if applicable) within 3-4 days</div>
+          <div class="tier-content">Crisis Infrastructure Brief + Sprint scope proposal within 3-4 days</div>
         </div>
 
         <div class="tier-detail">
           <div class="tier-label">You Submit</div>
-          <div class="tier-content">Crisis narrative + org chart + compliance docs + what success looks like</div>
+          <div class="tier-content">Crisis brief + designated rep contact + attempted solutions + decision-making structure</div>
         </div>
 
         <div class="tier-detail">
           <div class="tier-label">I Do</div>
-          <div class="tier-content">Analyze structural gaps, stress-test your capacity, recommend interventions</div>
+          <div class="tier-content">Analyze structural gaps, stress-test your capacity, and recommend immediate interventions backed by automated system parsing.</div>
         </div>
       </div>
 
@@ -573,7 +625,7 @@
 
         <div class="tier-detail">
           <div class="tier-label">I Do</div>
-          <div class="tier-content">Deep pattern analysis, leverage point identification, red-team your current approach</div>
+          <div class="tier-content">Deep pattern analysis, leverage point identification, and automated red-teaming of your current operational posture.</div>
         </div>
       </div>
 
@@ -594,7 +646,7 @@
 
         <div class="tier-detail">
           <div class="tier-label">I Do</div>
-          <div class="tier-content">Multi-layer infrastructure audit, strategic intervention design, KPI framework</div>
+          <div class="tier-content">Multi-layer infrastructure audit, strategic intervention design, and automated KPI tracking framework.</div>
         </div>
       </div>
     </div>
@@ -604,13 +656,25 @@
       <h3>Pre-Work Requirements (All Tiers)</h3>
       <ul class="requirements-list">
         <li><strong>Crisis Narrative</strong> (3 pages max): What's breaking, what triggered it, what success looks like</li>
-        <li><strong>Org Structure</strong> (1 document): Who reports to whom (org chart, list, or narrative)</li>
+        <li><strong>Org/System Structure</strong> (1 document): Who reports to whom (org chart, list, or system narrative)</li>
         <li><strong>Attempted Solutions</strong> (1 page): What you've already tried and what happened</li>
         <li><strong>Optional:</strong> 2-minute video walkthrough + up to 3 supporting documents</li>
       </ul>
       <div class="deadline-notice">
         <strong>Deadline:</strong> Pre-work due 5 business days before your scheduled Diagnostic call. Submitted materials are reviewed before the session to build your custom diagnostic agenda.
       </div>
+    </div>
+
+    <!-- PRICING RATIONALE BOX -->
+    <div class="requirements-box" style="border-color: var(--gold); background: var(--warm-gray);">
+      <h3>Premium Pricing, Clear Value</h3>
+      <p style="font-size: 15px; color: var(--text-secondary); margin-bottom: 20px;">infraSTRISIS™ pricing reflects the standard value of highly technical operations expertise coupled with cutting-edge system efficiency:</p>
+      <ul class="requirements-list">
+        <li><strong>Expert-Led Methodology:</strong> 15+ years of cross-industry operations, governance, and compliance expertise anchoring every strategic decision.</li>
+        <li><strong>Agent-Assisted Efficiency:</strong> Faster insights, comprehensive documentation, and automated tracking that bypass traditional consulting overhead.</li>
+        <li><strong>Structured Crisis Resolution:</strong> You pay for clarity, reduced chaos, and actionable next steps—not raw human labor hours.</li>
+      </ul>
+      <p style="font-size: 14px; color: var(--text-muted); margin-top: 16px;">The agent layer increases quality and responsiveness without reducing the value of human strategic guidance. We use technology as an efficiency multiplier, not a substitute for human synthesis.</p>
     </div>
 
     <!-- DIAGNOSTIC PROCESS -->
@@ -621,7 +685,7 @@
     <div class="process-grid">
       <div class="process-step">
         <h4><span class="step-number">1</span>Submit Pre-Work</h4>
-        <p>Send your brief or deck via email. Clear submission guidelines ensure I have what I need to map your crisis accurately.</p>
+        <p>Send your context brief or narrative via email. Clear submission guidelines ensure we have what we need to map your crisis accurately.</p>
       </div>
 
       <div class="process-step">
@@ -650,11 +714,62 @@
   <section class="service-section">
     <div class="section-header">
       <h2>Crisis Infrastructure Sprint</h2>
-      <p>By engagement only. The Sprint is reserved for organizations that have completed an infraSTRISIS™ Diagnostic Session. A 4-6 week engagement that maps the hidden infrastructure inside one real crisis your organization is navigating. We build the roles, routines, and tools to reduce chaos and improve outcomes.</p>
+      <p>The Sprint is a <strong>4-6 week agent-assisted engagement</strong> where infrastructure automation handles structural drafting, tracking, and scheduling, while human oversight ensures strategic alignment, quality control, and direct client advocacy.</p>
     </div>
 
     <div class="promise-box" style="margin-bottom: 48px;">
       <p><strong>By Engagement Only.</strong> Sprint architecture, timelines, and pricing are custom-built based on the specific structural fractures identified during your Diagnostic Session. Engagements begin at $7,500.</p>
+    </div>
+
+    <!-- AGENT-ASSISTED SPRINT MODEL: HOW IT WORKS -->
+    <div class="section-header" style="margin-top: 64px;">
+      <h3>Agent-Assisted Sprint Model: How It Works</h3>
+      <p>We use automated agents to compile, draft, and track work, significantly shortening turnaround times and eliminating standard agency overhead.</p>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-step">
+        <h4><strong>Week 1: Intake & Diagnosis</strong></h4>
+        <p>Deep-dive kickoff call with human-led discovery, augmented by agent-driven research on compliance baselines, operational data, and ecosystem friction points.</p>
+      </div>
+
+      <div class="process-step">
+        <h4><strong>Week 2: Crisis Map & Draft Playbook</strong></h4>
+        <p>Agents compile research and draft structured checklists, procedures, and playbook modules. The Steward synthesizes these outputs into a cohesive strategic draft.</p>
+      </div>
+
+      <div class="process-step">
+        <h4><strong>Week 3: Client Review & Revisions</strong></h4>
+        <p>A collaborative, human-led session to review drafts, target friction points, align on immediate implementation priorities, and iterate on necessary workflows.</p>
+      </div>
+
+      <div class="process-step">
+        <h4><strong>Weeks 4-6: Refinement & Handoff</strong></h4>
+        <p>Final playbook polish, delivery, and system handoff. Agents establish automated tracking pipelines and check-ins to monitor implementation milestones.</p>
+      </div>
+    </div>
+
+    <!-- TOUCHPOINTS SUBSECTION -->
+    <div class="subsection-grid">
+      <div class="touchpoint-box">
+        <h4>Human Touchpoints</h4>
+        <ul class="touchpoint-list">
+          <li><strong>Intake Kickoff Call:</strong> 90 minutes of dedicated, high-context discovery.</li>
+          <li><strong>Mid-Sprint Alignment:</strong> 30 minutes of human-to-human check-in (optional, as needed).</li>
+          <li><strong>Delivery &amp; Handoff Call:</strong> 60 minutes of strategic walkthrough and execution training.</li>
+          <li><strong>Steward Synthesis:</strong> Critical thinking, context-filtering, and quality assurance at every step.</li>
+        </ul>
+      </div>
+
+      <div class="touchpoint-box">
+        <h4>Agent Touchpoints</h4>
+        <ul class="touchpoint-list">
+          <li><strong>Automated Weekly Progress Updates:</strong> Direct visibility into tasks without meetings.</li>
+          <li><strong>Draft Deliverable Generation:</strong> Accelerated baseline procedures and playbook structures.</li>
+          <li><strong>Implementation Tracking Dashboard:</strong> Real-time status views on critical actions and burndown.</li>
+          <li><strong>Ecosystem Research:</strong> Real-time background queries on system policy, compliance, and structures.</li>
+        </ul>
+      </div>
     </div>
 
     <!-- SPRINT DELIVERABLES -->
@@ -663,8 +778,19 @@
       <ul class="requirements-list">
         <li><strong>infraSTRISIS™ Map</strong> (Visual burndown chart): Where you started → Steps to exit crisis → Stronger infrastructure</li>
         <li><strong>Modularized Mini-Playbook</strong>: Reusable checklists, scripts, routines, and decision trees customized to your crisis</li>
-        <li><strong>2 Implementation Support Sessions</strong>: Scheduled based on 90-day roadmap markers when you need extra clarity</li>
-        <li><strong>After-Action Brief with 90-Day Roadmap</strong>: What worked, what didn't, KPIs to measure success, follow-up schedule</li>
+        <li><strong>After-Action Brief with 90-Day Roadmap</strong>: Automated and human accountability structures to sustain recovery.</li>
+      </ul>
+    </div>
+
+    <!-- 90-DAY IMPLEMENTATION ROADMAP -->
+    <div class="requirements-box" style="border-color: var(--forest); background: var(--bone);">
+      <h3>90-Day Implementation Roadmap</h3>
+      <p style="font-size: 15px; color: var(--text-secondary); margin-bottom: 20px;">We believe in accountability and visibility without constant, unnecessary human overhead. Our post-sprint roadmap is structured for sustainability:</p>
+      <ul class="requirements-list">
+        <li><strong>Automated Milestone Tracking:</strong> Systematic check-ins at Days 30, 60, and 90 to track implementation progress.</li>
+        <li><strong>Two Human Coaching Calls:</strong> Strategically scheduled at critical decision points or operational milestones.</li>
+        <li><strong>Agent-Generated Progress Dashboards:</strong> Automated progress visualizations generated instantly when your team submits quick milestone updates.</li>
+        <li><strong>Asynchronous Verification:</strong> Standard follow-ups are automated. Human synthesis and intervention are brought in only when a system block is flagged.</li>
       </ul>
     </div>
 
@@ -708,3 +834,8 @@
     <div class="footer-contact">
       © 2026 infraSTRISIS Labs™
     </div>
+  </div>
+</footer>
+
+</body>
+</html>
