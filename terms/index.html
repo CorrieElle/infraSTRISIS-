@@ -3,387 +3,240 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Service | infraSTRISIS Labsâ¢</title>
+<title>Terms of Service | infraSTRISIS Labs&trade;</title>
 <link rel="icon" type="image/png" href="/favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  :root {
-    --ink: #0d0d0d;
-    --bone: #141414;
-    --forest: #2E6B4F;
-    --forest-mid: #3d8a65;
-    --forest-light: #1a2e24;
-    --gold: #C8932A;
-    --gold-light: #1e1608;
-    --steel: #1A3A5C;
-    --steel-light: #0f1e2e;
-    --warm-gray: #111111;
-    --mid-gray: #999;
-    --rule: #2a2a2a;
-    --white: #ffffff;
-    --text-primary: #f0f0f0;
-    --text-secondary: #b8b8b8;
-    --text-muted: #909090;
-    --card-bg: #1a1a1a;
-    --card-border: #2a2a2a;
-  }
+:root {
+  --ink: #0d0d0d;
+  --bone: #141414;
+  --forest: #2E6B4F;
+  --forest-mid: #3d8a65;
+  --forest-light: #1a2e24;
+  --gold: #C8932A;
+  --steel-light: #0f1e2e;
+  --warm-gray: #111111;
+  --rule: #2a2a2a;
+  --white: #ffffff;
+  --text-primary: #f0f0f0;
+  --text-secondary: #b8b8b8;
+  --text-muted: #909090;
+  --card-bg: #1a1a1a;
+  --card-border: #2a2a2a;
+}
 
-  html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--ink);
-    color: var(--text-primary);
-    line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
-  }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--ink);
+  color: var(--text-primary);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
 
-  /* HEADER */
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(13, 13, 13, 0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--rule);
-  }
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(13,13,13,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--rule);
+}
+.header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+nav {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+nav a:hover { color: var(--white); }
+.btn-nav {
+  background: var(--forest);
+  color: var(--white) !important;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.btn-nav:hover { background: var(--forest-mid); }
 
-  .header-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+/* MAIN content styling */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 24px 120px;
+}
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 6vw, 54px);
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.last-updated {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 48px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+section {
+  margin-bottom: 40px;
+}
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  color: var(--white);
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 8px;
+}
+p {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+strong {
+  color: var(--white);
+}
 
-  .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--white);
-    text-decoration: none;
-    letter-spacing: -0.02em;
-  }
-
-  nav {
-    display: flex;
-    gap: 28px;
-    align-items: center;
-  }
-
-  nav a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    transition: color 0.2s;
-  }
-
-  nav a:hover {
-    color: var(--white);
-  }
-
-  .btn-nav {
-    background: var(--forest);
-    color: var(--white);
-    padding: 8px 18px;
-    border-radius: 4px;
-    font-weight: 600;
-    transition: background 0.2s;
-  }
-
-  .btn-nav:hover {
-    background: var(--forest-mid);
-  }
-
-  /* MAIN CONTENT */
-  main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 80px 32px 120px;
-  }
-
-  .page-hero {
-    margin-bottom: 60px;
-    text-align: center;
-  }
-
-  .page-hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    font-weight: 900;
-    line-height: 1.1;
-    margin-bottom: 16px;
-    color: var(--white);
-  }
-
-  .page-hero .last-updated {
-    font-size: 14px;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-  }
-
-  /* TERMS CONTENT */
-  .terms-content {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .terms-section {
-    margin-bottom: 48px;
-    padding-bottom: 48px;
-    border-bottom: 1px solid var(--rule);
-  }
-
-  .terms-section:last-child {
-    border-bottom: none;
-  }
-
-  .terms-section h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: var(--white);
-  }
-
-  .terms-section h3 {
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: 32px;
-    margin-bottom: 16px;
-    color: var(--forest-mid);
-  }
-
-  .terms-section p {
-    font-size: 16px;
-    color: var(--text-secondary);
-    margin-bottom: 16px;
-    line-height: 1.8;
-  }
-
-  .terms-section ul,
-  .terms-section ol {
-    margin-left: 24px;
-    margin-bottom: 16px;
-  }
-
-  .terms-section li {
-    font-size: 16px;
-    color: var(--text-secondary);
-    margin-bottom: 8px;
-    line-height: 1.7;
-  }
-
-  .terms-section strong {
-    color: var(--white);
-    font-weight: 600;
-  }
-
-  .highlight-box {
-    background: linear-gradient(135deg, var(--forest-light), var(--steel-light));
-    border-left: 3px solid var(--forest);
-    padding: 24px;
-    margin: 24px 0;
-    border-radius: 4px;
-  }
-
-  .highlight-box p {
-    color: var(--white);
-    margin-bottom: 0;
-  }
-
-  .contact-box {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    border-radius: 8px;
-    padding: 32px;
-    text-align: center;
-    margin-top: 48px;
-  }
-
-  .contact-box h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    margin-bottom: 16px;
-    color: var(--white);
-  }
-
-  .contact-box a {
-    color: var(--forest-mid);
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.2s;
-  }
-
-  .contact-box a:hover {
-    color: var(--gold);
-  }
-
-  /* FOOTER */
-  footer {
-    background: var(--bone);
-    border-top: 1px solid var(--rule);
-    padding: 48px 40px;
-  }
-
-  .footer-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 32px;
-  }
-
-  .footer-brand {
-    flex: 1 1 200px;
-  }
-
-  .footer-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--white);
-  }
-
-  footer nav {
-    flex: 1 1 auto;
-    display: flex;
-    gap: 24px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  footer nav a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    transition: color 0.2s;
-  }
-
-  footer nav a:hover {
-    color: var(--white);
-  }
-
-  .footer-contact {
-    flex: 1 1 200px;
-    text-align: right;
-    font-size: 13px;
-    color: var(--text-muted);
-  }
-
-  .footer-contact a {
-    color: var(--forest-mid);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .footer-contact a:hover {
-    color: var(--gold);
-  }
-
-  @media (max-width: 768px) {
-    .header-inner,
-    .footer-inner {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    footer nav {
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .footer-contact {
-      text-align: center;
-    }
-
-    .page-hero h1 {
-      font-size: 36px;
-    }
-
-    main {
-      padding: 60px 24px 80px;
-    }
-  }
+/* FOOTER */
+footer {
+  background: var(--bone);
+  border-top: 1px solid var(--rule);
+  padding: 40px 24px;
+  margin-top: 80px;
+}
+.footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+footer nav { display: flex; gap: 20px; flex-wrap: wrap; }
+footer nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+footer nav a:hover { color: var(--white); }
+.footer-contact a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+.footer-contact a:hover { color: var(--white); }
 </style>
 </head>
 <body>
 
 <header role="banner">
   <div class="header-inner">
-    <a href="/" class="logo"><img src="/favicon.png" alt="" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;"><span style="color: #3d8a65;">infra</span>STRISIS Labs<span style="color: #C8932A;">â¢</span></a>
+    <a href="/" class="logo">
+      <img src="/favicon.png" alt="" style="width:22px;height:22px;">
+      <span><span style="color:#3d8a65">infra</span>STRISIS Labs<span style="color:#C8932A">&trade;</span></span>
+    </a>
     <nav aria-label="Main navigation">
-      <a href="/#problem">The Problem</a>
-      <a href="/services">Services</a>
-      <a href="/#about">About</a>
-      <a href="mailto:info@infrastrisis.com" class="btn-nav">Contact</a>
+      <div class="nav-links" style="display:flex;gap:24px;align-items:center;">
+        <a href="/#problem">The Problem</a>
+        <a href="/services">Services</a>
+        <a href="/#about">About</a>
+        <a href="mailto:info@infrastrisis.com" class="btn-nav">Contact</a>
+      </div>
     </nav>
   </div>
 </header>
 
 <main>
-  <div class="page-hero">
-    <h1>Terms of Service</h1>
-    <p class="last-updated">Last Updated: May 21, 2026</p>
-  </div>
+  <h1>Terms of Service</h1>
+  <div class="last-updated">Last Updated: May 26, 2026</div>
 
-  <div class="terms-content">
+  <section>
+    <h2>Terms Notice</h2>
+    <p>By booking, scheduling, or purchasing advisory services from <strong>infraSTRISIS Labs&trade;</strong> (operated by Corrie Al Momani), including Diagnostics, Sprints, or Operations Audits, you agree to the Terms and Conditions provided at the time of purchase or included directly within your client onboarding materials.</p>
+    <p>The comprehensive agreement governs payment policies, strict confidentiality, proprietary intellectual property boundaries, specific advisory scopes, professional disclaimers, and legal dispute resolution.</p>
+    <p><strong>Intellectual Property:</strong> infraSTRISIS Labs&trade; reserves all rights to its custom methodology, core diagnostic frameworks, procedural templates, models, agent-assisted prompt sets, workflows, and deliverables. Unauthorized copying, redistribution, or derivation is strictly prohibited.</p>
+  </section>
 
-    <section class="terms-section">
-      <h2>Terms Notice</h2>
-      <p>By booking, scheduling, or purchasing advisory services from <strong>infraSTRISIS Labsâ¢</strong> (operated by Corrie Al Momani), you agree to the Terms and Conditions provided at the time of purchase or included directly within your client onboarding materials.</p>
-      
-      <p>The comprehensive agreement governs payment policies, strict confidentiality, proprietary intellectual property boundaries, specific advisory scopes, professional disclaimers, and legal dispute resolution.</p>
+  <section>
+    <h2>General Use Terms</h2>
+    <p>All public content, typography, branding, and services information displayed on this website are the property of infraSTRISIS Labs&trade; and are protected by applicable intellectual property laws. You may access this public site for informational purposes only. You may not scrape, clone, or mirror any public operational or service descriptions to construct a competing service or framework.</p>
+  </section>
 
-      <div class="highlight-box">
-        <p><strong>Intellectual Property:</strong> infraSTRISIS Labsâ¢ reserves all rights to its custom methodology, core diagnostic frameworks, procedural templates, models, agent-assisted prompt sets, workflows, and deliverables. Unauthorized copying, redistribution, or derivation is strictly prohibited.</p>
-      </div>
-    </section>
+  <section>
+    <h2>Cognitive Sovereignty &amp; AI Governance</h2>
+    <p>infraSTRISIS Labs&trade; utilizes <strong>MySamurAI&trade;</strong> &mdash; a proprietary AI governance framework operating under the <strong>B.E.E.F. Doctrine</strong> (Boundaries, Evidence, Ethics, Function) &mdash; for internal data structuring, diagnostic analysis, and deliverable development.</p>
+    <p><strong>Corrie Al Momani</strong> is the sole human steward, reviewer, and final authority on all client-facing deliverables produced by or with the assistance of MySamurAI&trade;. No AI agent operating within the infraSTRISIS&trade; framework is authorized to speak for, execute decisions on behalf of, or independently manage client data without explicit human review and approval at each stage.</p>
+    <p>All AI-assisted work product is subject to human governance review prior to delivery. infraSTRISIS Labs&trade; does not operate autonomous or unconstrained AI agents in any client-facing capacity. The MySamurAI&trade; framework exists expressly to preserve cognitive sovereignty &mdash; both the firm's and the client's &mdash; throughout every engagement.</p>
+  </section>
 
-    <section class="terms-section">
-      <h2>General Use Terms</h2>
-      <p>All public content, typography, branding, and services information displayed on this website are the property of infraSTRISIS Labsâ¢ and are protected by applicable intellectual property laws. You may access this public site for informational purposes only. You may not scrape, clone, or mirror any public operational or service descriptions to construct a competing service or framework.</p>
-    </section>
-
-    <section class="terms-section">
-      <h2>Cognitive Sovereignty &amp; AI Governance</h2>
-      <p>infraSTRISIS Labsâ¢ utilizes <strong>MySamurAIâ¢</strong> â a proprietary AI governance framework operating under the <strong>B.E.E.F. Doctrine</strong> (Boundaries, Evidence, Ethics, Function) â for internal data structuring, diagnostic analysis, and deliverable development.</p>
-      <p><strong>Corrie Al Momani</strong> is the sole human steward, reviewer, and final authority on all client-facing deliverables produced by or with the assistance of MySamurAIâ¢. No AI agent operating within the infraSTRISISâ¢ framework is authorized to speak for, execute decisions on behalf of, or independently manage client data without explicit human review and approval at each stage.</p>
-      <p>All AI-assisted work product is subject to human governance review prior to delivery. infraSTRISIS Labsâ¢ does not operate autonomous or unconstrained AI agents in any client-facing capacity. The MySamurAIâ¢ framework exists expressly to preserve cognitive sovereignty â both the firm's and the client's â throughout every engagement.</p>
-    </section>
-
-    <div class="contact-box">
-      <h3>Need Clarification?</h3>
-      <p style="margin-bottom: 24px;">For general inquiries regarding our legal frameworks, client agreements, or post-booking policies, please contact us directly.</p>
-      <a href="mailto:info@infrastrisis.com" style="display: inline-block; background: var(--forest); color: var(--white); padding: 12px 28px; border-radius: 4px; text-decoration: none; font-weight: 600; transition: background 0.2s;">Send a Direct Message</a>
-    </div>
-
-  </div>
+  <section>
+    <h2>Need Clarification?</h2>
+    <p>For general inquiries regarding our legal frameworks, client agreements, or post-booking policies, please contact us directly at <a href="mailto:info@infrastrisis.com" style="color:var(--forest-mid);text-decoration:none;">info@infrastrisis.com</a>.</p>
+  </section>
 </main>
 
 <footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-brand">
-      <span class="footer-logo"><img src="/favicon.png" alt="" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;"><span style="color: #3d8a65;">infra</span>STRISIS Labs<span style="color: #C8932A;">â¢</span></span>
+      <span class="footer-logo">
+        <img src="/favicon.png" alt="" style="width:18px;height:18px;">
+        <span><span style="color:#3d8a65">infra</span>STRISIS Labs<span style="color:#C8932A">&trade;</span></span>
+      </span>
     </div>
     <nav aria-label="Footer navigation">
       <a href="/#problem">The Problem</a>
       <a href="/services">Services</a>
       <a href="/#about">About</a>
+      <a href="/terms">Terms of Service</a>
       <a href="mailto:info@infrastrisis.com">Contact</a>
     </nav>
     <div class="footer-contact">
-      Â© 2026 infraSTRISIS Labsâ¢
+      &copy; 2026 infraSTRISIS Labs&trade;
     </div>
   </div>
 </footer>
