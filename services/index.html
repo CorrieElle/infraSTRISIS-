@@ -154,7 +154,7 @@ main {
 .service-section { margin-bottom: 100px; }
 .tier-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
   margin-bottom: 56px;
 }
@@ -432,12 +432,14 @@ footer nav a:hover { color: var(--white); }
 .footer-contact a:hover { color: var(--white); }
 
 /* RESPONSIVE */
+@media (max-width: 1100px) {
+  .tier-grid { grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+}
 @media (max-width: 900px) {
-  .tier-grid { grid-template-columns: 1fr 1fr; }
+  .tier-grid { grid-template-columns: 1fr; }
   .subsection-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
-  .tier-grid { grid-template-columns: 1fr; }
   nav .nav-links { display: none; }
   .hamburger { display: flex; }
   .cta-buttons { flex-direction: column; align-items: center; }
@@ -475,11 +477,30 @@ footer nav a:hover { color: var(--white); }
   <!-- DIAGNOSTIC SESSION -->
   <section class="service-section">
     <div class="section-header">
-      <h2>infraSTRISIS™ Diagnostic Session</h2>
+      <h2>infraSTRISIS™ Diagnostic Sessions &amp; Audits</h2>
       <p>Delivered through agent-assisted analysis with human synthesis. AI handles deep background research, documentation drafting, and pattern recognition — allowing the Steward to focus on expert-led strategic guidance and quality control. Most clients receive their Crisis Infrastructure Brief within <strong>3–4 business days</strong> of pre-work submission.</p>
     </div>
 
     <div class="tier-grid">
+
+      <!-- OPERATIONS AUDIT (FAST-TRACK) -->
+      <div class="tier-card" style="border: 1px dashed var(--gold);">
+        <h3>Operations Audit</h3>
+        <div class="tier-price">$1,497</div>
+        <div class="tier-detail">
+          <div class="tier-label">You Receive</div>
+          <div class="tier-content">2-page Crisis Infrastructure Brief + actionable checklist within 3–4 business days</div>
+        </div>
+        <div class="tier-detail">
+          <div class="tier-label">You Submit</div>
+          <div class="tier-content">3-page crisis narrative + org structure + what you've tried to date</div>
+        </div>
+        <div class="tier-detail">
+          <div class="tier-label">I Do</div>
+          <div class="tier-content">30-minute high-velocity phone diagnostic, map your active operational fractures, and isolate your single point of system failure.</div>
+        </div>
+        <a href="https://buy.stripe.com/5kQ7sL9KEek75MLaOs3sI00" class="btn-stripe" target="_blank" rel="noopener">Book Operations Audit &rarr;</a>
+      </div>
 
       <!-- INDIVIDUAL ADVOCACY -->
       <div class="tier-card">
@@ -495,7 +516,7 @@ footer nav a:hover { color: var(--white); }
         </div>
         <div class="tier-detail">
           <div class="tier-label">I Do</div>
-          <div class="tier-content">Map your crisis infrastructure, identify the fracture points no one has named, and deliver a clear operational path forward — one agent, direct oversight.</div>
+          <div class="tier-content">60-minute deep-dive diagnostic call. Map your crisis infrastructure, identify the fracture points no one has named, and deliver an operational blueprint — one agent, direct oversight.</div>
         </div>
         <a href="https://buy.stripe.com/7sY7sL6ys8ZN4IH2hW3sI01" class="btn-stripe" target="_blank" rel="noopener">Book This Session &rarr;</a>
       </div>
@@ -514,7 +535,7 @@ footer nav a:hover { color: var(--white); }
         </div>
         <div class="tier-detail">
           <div class="tier-label">I Do</div>
-          <div class="tier-content">Analyze structural gaps, stress-test your capacity, and recommend immediate interventions — backed by multi-agent system parsing.</div>
+          <div class="tier-content">60-minute deep-dive diagnostic call. Analyze structural gaps, stress-test your capacity, and recommend immediate interventions — backed by multi-agent system parsing.</div>
         </div>
         <a href="https://buy.stripe.com/7sY3cv1e8b7V2Az4q43sI02" class="btn-stripe" target="_blank" rel="noopener">Book This Session &rarr;</a>
       </div>
@@ -533,7 +554,7 @@ footer nav a:hover { color: var(--white); }
         </div>
         <div class="tier-detail">
           <div class="tier-label">I Do</div>
-          <div class="tier-content">Deep pattern analysis, leverage point identification, and automated red-teaming of your current operational posture — multiple agents, Steward synthesis.</div>
+          <div class="tier-content">60-minute deep-dive diagnostic call. Deep pattern analysis, leverage point identification, and automated red-teaming of your current operational posture — multiple agents, Steward synthesis.</div>
         </div>
         <a href="https://buy.stripe.com/eVq4gzaOI5NBa31e0E3sI03" class="btn-stripe" target="_blank" rel="noopener">Book This Session &rarr;</a>
       </div>
@@ -552,7 +573,7 @@ footer nav a:hover { color: var(--white); }
         </div>
         <div class="tier-detail">
           <div class="tier-label">I Do</div>
-          <div class="tier-content">Multi-layer infrastructure audit, strategic intervention design, and automated KPI tracking framework — full agent deployment with Steward-led oversight at every step.</div>
+          <div class="tier-content">60-minute deep-dive diagnostic call. Multi-layer infrastructure audit, strategic intervention design, and automated KPI tracking framework — full agent deployment with Steward-led oversight at every step.</div>
         </div>
         <a href="https://buy.stripe.com/14AfZhaOIfobgrp4q43sI04" class="btn-stripe btn-stripe-enterprise" target="_blank" rel="noopener">Request Enterprise Audit &rarr;</a>
       </div>
@@ -569,7 +590,7 @@ footer nav a:hover { color: var(--white); }
         <li><strong>Optional:</strong> 2-minute video walkthrough + up to 3 supporting documents</li>
       </ul>
       <div class="deadline-notice">
-        <strong>Deadline:</strong> Pre-work due 5 business days before your scheduled Diagnostic call. Submitted materials are reviewed before the session to build your custom diagnostic agenda.
+        <strong>Deadline:</strong> Pre-work due 5 business days before your scheduled Diagnostic or Audit call. Submitted materials are reviewed before the session to build your custom diagnostic agenda.
       </div>
     </div>
 
