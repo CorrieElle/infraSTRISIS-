@@ -89,7 +89,6 @@ transition: background 0.2s;
 }
 .btn-nav:hover { background: var(--forest-mid); }
 
-/* HAMBURGER (mobile) */
 .hamburger {
 display: none;
 flex-direction: column;
@@ -522,7 +521,7 @@ margin-bottom: 20px;
 }
 .badge-stable  { background: rgba(46,107,79,0.25); color: #7fd4a0; border: 1px solid #2E6B4F; }
 .badge-fracture { background: rgba(200,147,42,0.2); color: #e8c070; border: 1px solid #C8932A; }
-.badge-collapse { background: rgba(180,40,40,0.2); color: #f08080; border: 1px solid #b42828; }
+.badge-breakdown { background: rgba(180,40,40,0.2); color: #f08080; border: 1px solid #b42828; }
 .audit-result-ctas { display: flex; flex-direction: column; gap: 12px; margin-top: 32px; }
 .audit-cta-primary {
 display: block;
@@ -649,8 +648,9 @@ nav .nav-links { display: none; }
 
 <main>
 <div class="page-hero">
-<h1>Services &amp; Tiers</h1>
-<p class="tagline">Crisis infrastructure stewardship designed to identify and repair hidden structural fractures within systems and organizations.</p>
+<h1>Services &amp; Engagements</h1>
+<p class="tagline">The chaos looks different in every industry. The pattern is always the same.</p>
+<p class="tagline" style="margin-top:16px;font-size:clamp(15px,2vw,17px);color:#909090;">After the Audit, you know what's actually slowing the organization down, what to do about it, and what can safely wait.</p>
 </div>
 
 <!-- AUDIT WIDGET -->
@@ -659,14 +659,14 @@ nav .nav-links { display: none; }
     <span class="audit-header-dot active"></span>
     <span class="audit-header-dot"></span>
     <span class="audit-header-dot"></span>
-    <span class="audit-header-label">infraSTRISIS&trade; Operations Self-Audit &mdash; 3 Questions</span>
+    <span class="audit-header-label">infraSTRISIS&trade; Operations Self-Audit: 3 Questions</span>
   </div>
   <div class="audit-body">
 
     <!-- PANEL 0: INTRO -->
     <div class="audit-panel active" id="audit-p0">
-      <h2>Is your infrastructure holding &mdash; or is it one crisis away from collapse?</h2>
-      <p class="audit-sub">Three questions. Ninety seconds. Honest results. No email required to start.</p>
+      <h2>Is your infrastructure holding - or is it one departure away from stalling?</h2>
+      <p class="audit-sub">Three questions. Ninety seconds. No email required to start.</p>
       <button class="audit-btn-next" onclick="auditNext(0)">Run the Audit &rarr;</button>
     </div>
 
@@ -677,12 +677,12 @@ nav .nav-links { display: none; }
         <div class="audit-pip" id="pip2"></div>
         <div class="audit-pip" id="pip3"></div>
       </div>
-      <div class="audit-q-label">Question 1 of 3 &mdash; The Knowledge Hostage</div>
+      <div class="audit-q-label">Question 1 of 3: The Knowledge Hostage</div>
       <p class="audit-prompt">Does your operation slow down or stop when one person is unavailable?</p>
       <div class="audit-options" id="opts1">
-        <button class="audit-option" data-q="1" data-pts="2" onclick="auditSelect(this)"><span class="opt-label">A</span>Yes &mdash; one person (including me) holds everything. If they're gone, we stall.</button>
-        <button class="audit-option" data-q="1" data-pts="1" onclick="auditSelect(this)"><span class="opt-label">B</span>Somewhat &mdash; we slow down but can keep moving with effort.</button>
-        <button class="audit-option" data-q="1" data-pts="0" onclick="auditSelect(this)"><span class="opt-label">C</span>No &mdash; we have real redundancy. The work survives any single absence.</button>
+        <button class="audit-option" data-q="1" data-pts="2" onclick="auditSelect(this)"><span class="opt-label">A</span>Yes - one person (including me) holds everything. If they're gone, we stall.</button>
+        <button class="audit-option" data-q="1" data-pts="1" onclick="auditSelect(this)"><span class="opt-label">B</span>Somewhat - we slow down but can keep moving with effort.</button>
+        <button class="audit-option" data-q="1" data-pts="0" onclick="auditSelect(this)"><span class="opt-label">C</span>No - we have real redundancy. The work survives any single absence.</button>
       </div>
       <div class="audit-nav"><button class="audit-btn-next" id="next1" disabled onclick="auditNext(1)">Next &rarr;</button></div>
     </div>
@@ -694,12 +694,12 @@ nav .nav-links { display: none; }
         <div class="audit-pip current" id="pip2b"></div>
         <div class="audit-pip" id="pip3b"></div>
       </div>
-      <div class="audit-q-label">Question 2 of 3 &mdash; The Bottleneck Chair</div>
-      <p class="audit-prompt">Are decisions waiting on one person to approve &mdash; and that person is already at capacity?</p>
+      <div class="audit-q-label">Question 2 of 3: The Bottleneck Chair</div>
+      <p class="audit-prompt">Are decisions waiting on one person to approve - and that person is already at capacity?</p>
       <div class="audit-options" id="opts2">
-        <button class="audit-option" data-q="2" data-pts="2" onclick="auditSelect(this)"><span class="opt-label">A</span>Yes &mdash; approvals, decisions, key calls all route through one seat.</button>
-        <button class="audit-option" data-q="2" data-pts="1" onclick="auditSelect(this)"><span class="opt-label">B</span>Sometimes &mdash; depends on the decision. High-stakes things still funnel upward.</button>
-        <button class="audit-option" data-q="2" data-pts="0" onclick="auditSelect(this)"><span class="opt-label">C</span>No &mdash; authority is distributed and functioning. Decisions move on their own.</button>
+        <button class="audit-option" data-q="2" data-pts="2" onclick="auditSelect(this)"><span class="opt-label">A</span>Yes - approvals, decisions, key calls all route through one seat.</button>
+        <button class="audit-option" data-q="2" data-pts="1" onclick="auditSelect(this)"><span class="opt-label">B</span>Sometimes - depends on the decision. High-stakes things still funnel upward.</button>
+        <button class="audit-option" data-q="2" data-pts="0" onclick="auditSelect(this)"><span class="opt-label">C</span>No - authority is distributed and functioning. Decisions move on their own.</button>
       </div>
       <div class="audit-nav"><button class="audit-btn-next" id="next2" disabled onclick="auditNext(2)">Next &rarr;</button></div>
     </div>
@@ -711,12 +711,12 @@ nav .nav-links { display: none; }
         <div class="audit-pip done"></div>
         <div class="audit-pip current"></div>
       </div>
-      <div class="audit-q-label">Question 3 of 3 &mdash; The Recurring Fire</div>
-      <p class="audit-prompt">Is your team solving the same problem repeatedly &mdash; without a structural fix that makes it stop?</p>
+      <div class="audit-q-label">Question 3 of 3: The Recurring Fire</div>
+      <p class="audit-prompt">Is your team solving the same problem repeatedly - without a structural fix that makes it stop?</p>
       <div class="audit-options" id="opts3">
-        <button class="audit-option" data-q="3" data-pts="2" onclick="auditSelect(this)"><span class="opt-label">A</span>Yes &mdash; the same fire keeps reigniting no matter what we patch.</button>
-        <button class="audit-option" data-q="3" data-pts="1" onclick="auditSelect(this)"><span class="opt-label">B</span>Sometimes &mdash; it resurfaces under stress or when a key person is out.</button>
-        <button class="audit-option" data-q="3" data-pts="0" onclick="auditSelect(this)"><span class="opt-label">C</span>No &mdash; we've addressed root causes. They've stayed fixed.</button>
+        <button class="audit-option" data-q="3" data-pts="2" onclick="auditSelect(this)"><span class="opt-label">A</span>Yes - the same problem keeps resurfacing no matter what we patch.</button>
+        <button class="audit-option" data-q="3" data-pts="1" onclick="auditSelect(this)"><span class="opt-label">B</span>Sometimes - it resurfaces under pressure or when a key person is out.</button>
+        <button class="audit-option" data-q="3" data-pts="0" onclick="auditSelect(this)"><span class="opt-label">C</span>No - we've addressed root causes. They've stayed fixed.</button>
       </div>
       <div class="audit-nav"><button class="audit-btn-next" id="next3" disabled onclick="auditNext(3)">See My Results &rarr;</button></div>
     </div>
@@ -724,12 +724,12 @@ nav .nav-links { display: none; }
     <!-- RESULT: STABLE (0-1) -->
     <div class="audit-panel" id="audit-r0">
       <div class="audit-progress"><div class="audit-pip done"></div><div class="audit-pip done"></div><div class="audit-pip done"></div></div>
-      <span class="audit-result-badge badge-stable">Structurally Stable</span>
-      <h2>You're not in crisis. You're in maintenance mode.</h2>
-      <p class="audit-sub">Your infrastructure has real redundancy. Decisions distribute. Fires get resolved. The work now is protecting that foundation &mdash; because most organizations don't notice the fracture forming until it's already structural.</p>
-      <p class="audit-sub">If growth, scale, or a leadership transition is on the horizon, now is exactly when to map what you have before pressure tests it.</p>
+      <span class="audit-result-badge badge-stable">Structurally Sound</span>
+      <h2>Your infrastructure is holding. The work now is keeping it that way.</h2>
+      <p class="audit-sub">Real redundancy. Distributed decision-making. Problems that stay solved. That's not the norm - and it won't stay true without intention.</p>
+      <p class="audit-sub">Growth, a leadership transition, or a scaling push will pressure-test everything you've built. Now is exactly when to map what's working before something changes.</p>
       <div class="audit-result-ctas">
-        <a href="mailto:info@infrastrisis.com?subject=infraSTRISIS%20Inquiry%20%E2%80%94%20Stable%20Infrastructure%20%2F%20Proactive%20Audit&body=I%20completed%20the%203-Question%20Audit%20and%20scored%20in%20the%20Structurally%20Stable%20range.%20I%20want%20to%20discuss%20proactive%20infrastructure%20mapping." class="audit-cta-secondary">Talk to us about proactive infrastructure mapping &rarr;</a>
+        <a href="mailto:info@infrastrisis.com?subject=infraSTRISIS%20Inquiry%20%E2%80%94%20Proactive%20Infrastructure%20Mapping&body=I%20completed%20the%203-Question%20Audit%20and%20scored%20in%20the%20Structurally%20Sound%20range.%20I%20want%20to%20discuss%20proactive%20infrastructure%20mapping." class="audit-cta-secondary">Talk to us about proactive infrastructure mapping &rarr;</a>
       </div>
       <button class="audit-restart" onclick="auditRestart()">Retake the audit</button>
     </div>
@@ -737,28 +737,28 @@ nav .nav-links { display: none; }
     <!-- RESULT: EARLY FRACTURE (2-3) -->
     <div class="audit-panel" id="audit-r1">
       <div class="audit-progress"><div class="audit-pip done"></div><div class="audit-pip done"></div><div class="audit-pip done"></div></div>
-      <span class="audit-result-badge badge-fracture">Early Fracture Detected</span>
-      <h2>You have 1&ndash;2 fractures. They're manageable. They won't stay that way.</h2>
-      <p class="audit-sub">A single knowledge dependency or bottleneck rarely stays contained. Under stress &mdash; a departure, a crisis, a growth push &mdash; it becomes the reason everything stalls.</p>
-      <p class="audit-sub">The Operations Audit maps exactly where the fracture is sitting before it metastasizes. Thirty minutes. A written brief. Actionable from day one.</p>
+      <span class="audit-result-badge badge-fracture">Structural Gap Identified</span>
+      <h2>One or two gaps. Manageable now. Not indefinitely.</h2>
+      <p class="audit-sub">A single knowledge dependency or bottleneck rarely stays contained. Under pressure - a departure, a growth push, a compliance deadline - it becomes the reason everything stalls.</p>
+      <p class="audit-sub">The Operations Audit maps exactly where the gap is sitting and what it will cost you if it isn't addressed. Thirty minutes. A written brief. Actionable from day one.</p>
       <div class="audit-result-ctas">
-        <a href="https://buy.stripe.com/5kQ7sL9KEek75MLaOs3sI00" class="audit-cta-primary" target="_blank" rel="noopener">Book the Operations Audit &mdash; $1,497 &rarr;</a>
-        <a href="mailto:info@infrastrisis.com?subject=infraSTRISIS%20Inquiry%20%E2%80%94%20Early%20Fracture%20Audit%20Result&body=I%20completed%20the%203-Question%20Audit%20and%20scored%20in%20the%20Early%20Fracture%20range.%20I%20have%20questions%20before%20booking." class="audit-cta-secondary">Have questions first? Send us a message &rarr;</a>
+        <a href="https://buy.stripe.com/5kQ7sL9KEek75MLaOs3sI00" class="audit-cta-primary" target="_blank" rel="noopener">Book the Operations Audit - $1,497 &rarr;</a>
+        <a href="mailto:info@infrastrisis.com?subject=infraSTRISIS%20Inquiry%20%E2%80%94%20Structural%20Gap%20Result&body=I%20completed%20the%203-Question%20Audit%20and%20scored%20in%20the%20Structural%20Gap%20range.%20I%20have%20questions%20before%20booking." class="audit-cta-secondary">Have questions first? Send us a message &rarr;</a>
       </div>
       <div class="audit-score-line">Operations Audit &middot; 30 min &middot; $1,497 &middot; Written brief in 3&ndash;4 business days</div>
       <button class="audit-restart" onclick="auditRestart()">Retake the audit</button>
     </div>
 
-    <!-- RESULT: ACTIVE COLLAPSE (4-6) -->
+    <!-- RESULT: ACTIVE BREAKDOWN (4-6) -->
     <div class="audit-panel" id="audit-r2">
       <div class="audit-progress"><div class="audit-pip done"></div><div class="audit-pip done"></div><div class="audit-pip done"></div></div>
-      <span class="audit-result-badge badge-collapse">Active Infrastructure Collapse</span>
-      <h2>This isn't a process problem. This is a structural emergency.</h2>
-      <p class="audit-sub">Three fractures running simultaneously means your system is compensating, not functioning. The bottleneck, the knowledge gap, and the recurring fire are almost certainly connected &mdash; one structural failure feeding the others.</p>
-      <p class="audit-sub">The Operations Audit is your fastest entry point. Thirty minutes on the phone. A written brief that maps the actual failure point &mdash; not the symptoms you've been patching. If the brief confirms deeper infrastructure work is needed, we discuss it from there.</p>
+      <span class="audit-result-badge badge-breakdown">Active Infrastructure Breakdown</span>
+      <h2>This isn't a process problem. It's a structural one.</h2>
+      <p class="audit-sub">Three gaps running simultaneously means the system is compensating, not functioning. The bottleneck, the knowledge dependency, and the recurring problem are almost certainly connected - one structural failure feeding the others.</p>
+      <p class="audit-sub">The Operations Audit is the entry point. Thirty minutes. A written brief that maps the actual failure point - not the symptoms you've been patching. If the brief confirms deeper infrastructure work is warranted, we scope it from there.</p>
       <div class="audit-result-ctas">
-        <a href="https://buy.stripe.com/5kQ7sL9KEek75MLaOs3sI00" class="audit-cta-primary" target="_blank" rel="noopener">Book the Operations Audit &mdash; $1,497 &rarr;</a>
-        <a href="mailto:info@infrastrisis.com?subject=infraSTRISIS%20Inquiry%20%E2%80%94%20Active%20Collapse%20Audit%20Result&body=I%20completed%20the%203-Question%20Audit%20and%20scored%20in%20the%20Active%20Infrastructure%20Collapse%20range.%20I%20want%20to%20discuss%20the%20Diagnostic%20Session%20or%20Sprint%20options." class="audit-cta-secondary">This looks like Diagnostic-tier work &mdash; let's talk &rarr;</a>
+        <a href="https://buy.stripe.com/5kQ7sL9KEek75MLaOs3sI00" class="audit-cta-primary" target="_blank" rel="noopener">Book the Operations Audit - $1,497 &rarr;</a>
+        <a href="mailto:info@infrastrisis.com?subject=infraSTRISIS%20Inquiry%20%E2%80%94%20Active%20Breakdown%20Result&body=I%20completed%20the%203-Question%20Audit%20and%20scored%20in%20the%20Active%20Infrastructure%20Breakdown%20range.%20I%20want%20to%20discuss%20next%20steps." class="audit-cta-secondary">This looks like deeper work - let's talk &rarr;</a>
       </div>
       <div class="audit-score-line">Operations Audit &middot; 30 min &middot; $1,497 &middot; Written brief in 3&ndash;4 business days</div>
       <button class="audit-restart" onclick="auditRestart()">Retake the audit</button>
@@ -767,111 +767,81 @@ nav .nav-links { display: none; }
   </div>
 </section>
 
-<!-- DIAGNOSTIC SESSION -->
+<!-- OPERATIONS AUDIT -->
 <section class="service-section">
 <div class="section-header">
-<h2>infraSTRISIS&trade; Diagnostic Sessions &amp; Audits</h2>
-<p>Delivered through agent-assisted analysis with human synthesis. AI handles deep background research, documentation drafting, and pattern recognition &mdash; allowing the Steward to focus on expert-led strategic guidance and quality control. Most clients receive their Crisis Infrastructure Brief within <strong>3&ndash;4 business days</strong> of pre-work submission.</p>
+<h2>The Operations Audit</h2>
+<p>Every engagement begins here. Most leaders know something feels off - deadlines slip, turnover increases, execution slows. They can feel the symptoms but can't see the source. The Audit delivers a prioritized view of what's actually driving those outcomes, where the highest-leverage interventions are, and what can safely wait. Most clients receive their brief within <strong>3&ndash;4 business days</strong> of pre-work submission.</p>
 </div>
 
-<div class="tier-grid">
+<div class="tier-grid" style="grid-template-columns: 1fr;">
 
-<div class="tier-card" style="border: 1px dashed var(--gold);">
+<div class="tier-card" style="border: 1px dashed var(--gold); max-width: 600px;">
 <h3>Operations Audit</h3>
 <div class="tier-price">$1,497</div>
-<div class="tier-detail"><div class="tier-label">You Receive</div><div class="tier-content">2-page Crisis Infrastructure Brief + actionable checklist within 3&ndash;4 business days</div></div>
-<div class="tier-detail"><div class="tier-label">You Submit</div><div class="tier-content">3-page crisis narrative + org structure + what you've tried to date</div></div>
-<div class="tier-detail"><div class="tier-label">I Do</div><div class="tier-content">30-minute high-velocity phone diagnostic, map your active operational fractures, and isolate your single point of system failure.</div></div>
+<div class="tier-detail"><div class="tier-label">What You Leave With</div><div class="tier-content">A prioritized view of where execution is slowing, where risk is accumulating, and what deserves action first - delivered as a 2-page Operations Infrastructure Brief + checklist within 3&ndash;4 business days</div></div>
+<div class="tier-detail"><div class="tier-label">What We Need From You</div><div class="tier-content">3-page Operations Brief + org structure + what you've already tried</div></div>
+<div class="tier-detail"><div class="tier-label">The Work</div><div class="tier-content">30-minute diagnostic call. We map the active structural gaps, identify the single point of execution failure, and determine whether deeper engagement is warranted. If it is, we scope it together from the brief.</div></div>
 <a href="https://buy.stripe.com/5kQ7sL9KEek75MLaOs3sI00" class="btn-stripe" target="_blank" rel="noopener">Book Operations Audit &rarr;</a>
-</div>
-
-<div class="tier-card">
-<h3>Individual Advocacy</h3>
-<div class="tier-detail"><div class="tier-label">You Receive</div><div class="tier-content">Custom Strategic Roadmap + actionable navigation steps within 3&ndash;4 business days</div></div>
-<div class="tier-detail"><div class="tier-label">You Submit</div><div class="tier-content">3-page context brief + systems and barriers encountered + current safe markers</div></div>
-<div class="tier-detail"><div class="tier-label">I Do</div><div class="tier-content">60-minute deep-dive diagnostic call. Map your crisis infrastructure, identify the fracture points no one has named, and deliver an operational blueprint &mdash; one agent, direct oversight.</div></div>
-<a href="mailto:info@infrastrisis.com?subject=Request: Individual Advocacy Diagnostic Session" class="btn-stripe">Request Diagnostic Session &rarr;</a>
-</div>
-
-<div class="tier-card">
-<h3>Small Orgs &amp; Founders</h3>
-<div class="tier-detail"><div class="tier-label">You Receive</div><div class="tier-content">Crisis Infrastructure Brief + Sprint scope proposal within 3&ndash;4 business days</div></div>
-<div class="tier-detail"><div class="tier-label">You Submit</div><div class="tier-content">Crisis brief + designated rep contact + attempted solutions + decision-making structure</div></div>
-<div class="tier-detail"><div class="tier-label">I Do</div><div class="tier-content">60-minute deep-dive diagnostic call. Analyze structural gaps, stress-test your capacity, and recommend immediate interventions &mdash; backed by multi-agent system parsing.</div></div>
-<a href="mailto:info@infrastrisis.com?subject=Request: Small Orgs %26 Founders Diagnostic" class="btn-stripe">Request Diagnostic Session &rarr;</a>
-</div>
-
-<div class="tier-card">
-<h3>Mid-Size Organizations</h3>
-<div class="tier-detail"><div class="tier-label">You Receive</div><div class="tier-content">Technical Crisis Infrastructure Brief + Sprint scope proposal within 3&ndash;4 business days</div></div>
-<div class="tier-detail"><div class="tier-label">You Submit</div><div class="tier-content">Crisis brief + designated rep contact + attempted solutions + decision-making structure</div></div>
-<div class="tier-detail"><div class="tier-label">I Do</div><div class="tier-content">60-minute deep-dive diagnostic call. Deep pattern analysis, leverage point identification, and automated red-teaming of your current operational posture &mdash; multiple agents, Steward synthesis.</div></div>
-<a href="mailto:info@infrastrisis.com?subject=Request: Mid-Size Organization Diagnostic" class="btn-stripe">Request Diagnostic Session &rarr;</a>
-</div>
-
-<div class="tier-card">
-<h3>Enterprise</h3>
-<div class="tier-detail"><div class="tier-label">You Receive</div><div class="tier-content">Comprehensive Crisis Infrastructure Brief + custom Sprint architecture within 3&ndash;4 business days</div></div>
-<div class="tier-detail"><div class="tier-label">You Submit</div><div class="tier-content">Full ecosystem brief + 2 designated reps + compliance and governance docs</div></div>
-<div class="tier-detail"><div class="tier-label">I Do</div><div class="tier-content">60-minute deep-dive diagnostic call. Multi-layer infrastructure audit, strategic intervention design, and automated KPI tracking framework &mdash; full agent deployment with Steward-led oversight at every step.</div></div>
-<a href="mailto:info@infrastrisis.com?subject=Inquiry: Enterprise Infrastructure Audit" class="btn-stripe btn-stripe-enterprise">Request Enterprise Audit &rarr;</a>
 </div>
 
 </div>
 
 <div class="requirements-box">
-<h3>Pre-Work Requirements (All Tiers)</h3>
+<h3>Operations Signal Brief</h3>
+<p style="font-size:15px;color:var(--text-secondary);margin-bottom:24px;">The quality of the diagnostic is determined by the quality of the signal. Before the Audit call, you submit a structured brief that gives us a clear picture of what the organization is actually experiencing. The more precise your input, the more precise the map we build from it.</p>
 <ul class="requirements-list">
-<li><strong>Crisis Narrative</strong> (3 pages max): What's breaking, what triggered it, what success looks like</li>
-<li><strong>Org/System Structure</strong> (1 document): Who reports to whom &mdash; org chart, list, or system narrative</li>
-<li><strong>Attempted Solutions</strong> (1 page): What you've already tried and what happened</li>
-<li><strong>Optional:</strong> 2-minute video walkthrough + up to 3 supporting documents</li>
+<li><strong>What's Not Working</strong> (3 pages max): What you're observing, what triggered the concern, what success looks like from where you sit</li>
+<li><strong>Org/System Structure</strong> (1 document): Who reports to whom - org chart, list, or system narrative</li>
+<li><strong>What You've Already Tried</strong> (1 page): Interventions attempted and what happened. This prevents us from recommending what's already been ruled out.</li>
+<li><strong>Optional enrichment:</strong> 2-minute video walkthrough + up to 3 supporting documents</li>
 </ul>
 <div class="deadline-notice">
-<strong>Deadline:</strong> Pre-work due 5 business days before your scheduled Diagnostic or Audit call. Submitted materials are reviewed before the session to build your custom diagnostic agenda.
+<strong>Timing:</strong> Signal brief submitted 5 business days before your Audit call. We review it in full before the session so the diagnostic starts from your actual situation, not from scratch.
 </div>
+</div>
+
+</section>
+
+<!-- ONGOING ENGAGEMENTS -->
+<section class="service-section">
+<div class="section-header">
+<h2>Ongoing Infrastructure Engagements</h2>
+<p>For organizations whose Audit confirms that ongoing structural work is warranted. The retainer's job is straightforward: surface new risks, bottlenecks, and operational drift before they become expensive. It is not advisory overhead - it's active monitoring, flag surfacing, and structured solution cycles when something surfaces. Agent-led with Steward oversight at every step.</p>
+</div>
+
+<div class="tier-grid" style="grid-template-columns: 1fr; max-width: 600px;">
+
+<div class="tier-card">
+<h3>Ongoing Infrastructure Engagement</h3>
+<div class="tier-detail"><div class="tier-label">What It Is</div><div class="tier-content">Active monitoring, structural flag surfacing, and solution cycle engagement when something surfaces. Not advisory overhead - ongoing governance that ensures operational drift, new bottlenecks, and emerging risks are identified before they become expensive.</div></div>
+<div class="tier-detail"><div class="tier-label">How Scope Is Determined</div><div class="tier-content">The Operations Audit brief determines the engagement level. Scope, cadence, and structure are built from the findings - not selected from a menu. If ongoing work is warranted, we scope it together after the Audit.</div></div>
+<div class="tier-detail"><div class="tier-label">Entry</div><div class="tier-content">Operations Audit required. Engagement begins from the brief.</div></div>
+<a href="mailto:info@infrastrisis.com?subject=infraSTRISIS%20Inquiry%20%E2%80%94%20Ongoing%20Engagement" class="btn-stripe">Start the Conversation &rarr;</a>
+</div>
+
 </div>
 
 <div class="requirements-box" style="border-color:var(--gold);">
-<h3>Clear Methodology, Clear Value</h3>
-<p style="font-size:15px;color:var(--text-secondary);margin-bottom:20px;">infraSTRISIS&trade; engagements reflect the compounded value of technical operations expertise, cross-industry pattern recognition, and agent-assisted delivery that no single-industry consultant can replicate.</p>
+<h3>How the Engagement Works</h3>
+<p style="font-size:15px;color:var(--text-secondary);margin-bottom:20px;">infraSTRISIS&trade; engagements are built on the Operations Audit. The brief determines the scope. The retainer delivers ongoing monitoring and structured intervention - not open-ended advisory hours.</p>
 <ul class="requirements-list">
-<li><strong>Expert-Led Methodology:</strong> 15+ years of cross-industry operations, governance, and compliance expertise anchoring every strategic decision.</li>
-<li><strong>Agent-Assisted Efficiency:</strong> Faster insights, comprehensive documentation, and automated tracking &mdash; without the overhead of a traditional consulting engagement.</li>
-<li><strong>Structured Crisis Resolution:</strong> You pay for clarity, reduced chaos, and an actionable path forward &mdash; not raw labor hours.</li>
+<li><strong>Expert-Led Methodology:</strong> 15+ years of cross-industry operations, governance, and compliance pattern recognition anchoring every recommendation.</li>
+<li><strong>Agent-Assisted Delivery:</strong> Faster analysis, comprehensive documentation, and automated monitoring - without the overhead of a traditional consulting engagement.</li>
+<li><strong>Defined Scope, Defined Outcomes:</strong> You pay for structural clarity and an actionable path forward. The engagement ends when the work is done - or continues as long as monitoring adds value.</li>
 </ul>
-<p style="font-size:13px;color:var(--text-muted);margin-top:16px;">The agent layer increases quality and responsiveness. It does not reduce the value of human strategic oversight &mdash; it extends it.</p>
+<p style="font-size:13px;color:var(--text-muted);margin-top:16px;">The agent layer increases quality and responsiveness. It does not replace human strategic oversight - it extends it.</p>
 </div>
 
-<div class="section-header">
-<h2 style="font-size:28px;">The Diagnostic Process</h2>
-<p>A structured intake, discovery, and delivery sequence. Full process documentation, pre-work guidelines, and your custom diagnostic agenda are provided at booking.</p>
-</div>
-</section>
-
-<section class="service-section">
-<div class="section-header">
-<h2>Crisis Infrastructure Sprint</h2>
-<p>A <strong>4&ndash;6 week agent-assisted engagement</strong> where infrastructure automation handles structural drafting, tracking, and scheduling &mdash; while human oversight ensures strategic alignment, quality control, and direct client advocacy at every step.</p>
-</div>
-
-<div class="requirements-box" style="border-color:var(--forest);margin-bottom:40px;">
-<p style="font-size:17px;font-weight:500;color:var(--white);"><strong>By Engagement Only.</strong> Sprint architecture, timelines, and pricing are custom-built from the structural fractures identified during your Diagnostic Session. Engagements begin at $12,000.</p>
-</div>
-
-<div class="section-header" style="margin-top:48px;">
-<h2 style="font-size:26px;">How It Works</h2>
-<p>A phased engagement with defined milestones &mdash; from intake through handoff. Scope, timeline, week-by-week structure, deliverables, and commitment requirements are detailed in your Sprint agreement.</p>
-</div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
-<h2>The next crisis isn't coming.<br>It's already here.</h2>
-<p>The fracture you keep patching has a structural cause. One conversation maps it before it costs you everything.</p>
+<h2>Stop guessing.<br>Start with the Audit.</h2>
+<p>One conversation. A prioritized brief that tells you what's actually slowing the organization down, what to do about it, and what can safely wait.</p>
 <div class="cta-buttons">
-<a href="https://buy.stripe.com/5kQ7sL9KEek75MLaOs3sI00" class="btn-primary">Book the Operations Audit &mdash; $1,497</a>
-<a href="mailto:info@infrastrisis.com?subject=infraSTRISIS%20Inquiry%20%E2%80%94%20Diagnostic%20Session&body=I%20am%20interested%20in%20learning%20more%20about%20the%20infraSTRISIS%20Diagnostic%20Session%20or%20Sprint%20options." class="btn-secondary">Send a Direct Message</a>
+<a href="https://buy.stripe.com/5kQ7sL9KEek75MLaOs3sI00" class="btn-primary">Book the Operations Audit - $1,497</a>
+<a href="mailto:info@infrastrisis.com?subject=infraSTRISIS%20Inquiry&body=I%20am%20interested%20in%20learning%20more%20about%20infraSTRISIS%20engagements." class="btn-secondary">Send a Direct Message</a>
 </div>
 </section>
 </main>
@@ -938,3 +908,4 @@ nav .nav-links { display: none; }
 
 </body>
 </html>
+
