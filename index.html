@@ -7,719 +7,719 @@
 <link rel="icon" type="image/png" href="/favicon.png">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --ink: #0d0d0d;
-    --bone: #141414;
-    --forest: #2E6B4F;
-    --forest-mid: #3d8a65;
-    --forest-light: #1a2e24;
-    --gold: #C8932A;
-    --gold-light: #1e1608;
-    --steel: #1A3A5C;
-    --steel-light: #0f1e2e;
-    --warm-gray: #111111;
-    --mid-gray: #999;
-    --rule: #2a2a2a;
-    --white: #ffffff;
-    --text-primary: #f0f0f0;
-    --text-secondary: #b8b8b8;
-    --text-muted: #909090;
-    --card-bg: #1a1a1a;
-    --card-border: #2a2a2a;
-  }
-
-  html { scroll-behavior: smooth; }
-
-  .skip-link {
-    position: absolute;
-    left: -9999px;
-    top: 8px;
-    padding: 12px 20px;
-    background: var(--forest);
-    color: #fff;
-    font-weight: 600;
-    font-size: 14px;
-    z-index: 9999;
-    text-decoration: none;
-  }
-  .skip-link:focus {
-    left: 8px;
-  }
-
-  body {
-  overflow-x: hidden;
-    font-family: 'DM Sans', sans-serif;
-    background: var(--ink);
-    color: var(--text-primary);
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  /* ── HERO ── */
-  .hero {
-    background: var(--ink);
-    color: var(--white);
-    padding: 80px 40px 90px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 30% 50%, rgba(46,107,79,0.25) 0%, transparent 60%),
-                radial-gradient(ellipse at 70% 20%, rgba(200,147,42,0.12) 0%, transparent 50%);
-    pointer-events: none;
-  }
-
-  .hero-inner { position: relative; max-width: 820px; margin: 0 auto; }
-
-  .hero-eyebrow {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 24px;
-  }
-
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(36px, 6vw, 64px);
-    font-weight: 900;
-    line-height: 1.08;
-    letter-spacing: -0.03em;
-    color: var(--white);
-    margin-bottom: 28px;
-  }
-
-  .hero h1 em {
-    font-style: italic;
-    color: var(--gold);
-  }
-
-  .hero-sub {
-    font-size: clamp(15px, 2vw, 18px);
-    font-weight: 300;
-    color: #d4d4d4;
-    max-width: 700px;
-    margin: 0 auto 36px;
-    line-height: 1.65;
-  }
-
-  .hero-sub strong { color: var(--white); font-weight: 600; }
-
-  .hero-buttons {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-  }
-
-  .btn-primary {
-    background: var(--forest);
-    color: var(--white);
-    padding: 16px 32px;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: background 0.2s;
-  }
-
-  .btn-primary:hover { background: var(--forest-mid); }
-
-  .btn-secondary {
-    background: transparent;
-    color: var(--white);
-    padding: 16px 32px;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    text-decoration: none;
-    border: 1px solid rgba(255,255,255,0.3);
-    transition: border-color 0.2s;
-  }
-
-  .btn-secondary:hover { border-color: var(--white); }
-
-  .trust-bar {
-    font-size: 11px;
-    color: #999;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .trust-bar span {
-    color: #777;
-    margin: 0 12px;
-  }
-
-  /* ── SECTIONS ── */
-  section { padding: 80px 40px; }
-
-  .section-inner { max-width: 900px; margin: 0 auto; }
-
-  .section-eyebrow {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--forest-mid);
-    margin-bottom: 16px;
-  }
-
-  .section-eyebrow.gold { color: var(--gold); }
-
-  h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, 4vw, 44px);
-    font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    color: var(--text-primary);
-    margin-bottom: 20px;
-  }
-
-  h2 em { font-style: italic; color: var(--forest); }
-  h2 em.gold { color: var(--gold); }
-
-  .lead {
-    font-size: 17px;
-    font-weight: 400;
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin-bottom: 24px;
-    max-width: 700px;
-  }
-
-  /* ── PAIN SECTION ── */
-  .pain-section { background: #111111; }
-
-  .pain-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px;
-    margin-top: 36px;
-  }
-
-  .pain-card {
-    background: var(--card-bg);
-    padding: 24px;
-    border-left: 3px solid var(--gold);
-  }
-
-  .pain-card .industry {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 8px;
-  }
-
-  .pain-card p {
-    font-size: 14px;
-    color: var(--text-secondary);
-    line-height: 1.6;
-  }
-
-  /* ── ORIGIN STORY ── */
-  .origin-section { background: var(--ink); color: var(--white); }
-
-  .origin-section h2 { color: var(--white); }
-  .origin-section h2 em { color: var(--gold); }
-
-  .origin-section .lead { color: #bbb; }
-
-  .verticals {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 28px;
-  }
-
-  .vertical-tag {
-    background: rgba(255,255,255,0.08);
-    color: #ccc;
-    font-size: 12px;
-    font-weight: 500;
-    padding: 6px 14px;
-    letter-spacing: 0.04em;
-  }
-
-  .origin-quote {
-    border-left: 3px solid var(--gold);
-    padding: 20px 24px;
-    margin: 36px 0 0;
-    background: rgba(200,147,42,0.08);
-  }
-
-  .origin-quote p {
-    font-family: 'Playfair Display', serif;
-    font-size: 19px;
-    font-style: italic;
-    color: var(--white);
-    line-height: 1.6;
-  }
-
-  /* ── PROCESS ── */
-  .process-section { background: #0d0d0d; }
-
-  .steps-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    margin-top: 36px;
-  }
-
-  .step-block {
-    background: var(--card-bg);
-    padding: 32px 24px;
-    position: relative;
-    border: 1px solid var(--card-border);
-  }
-
-  .step-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 52px;
-    font-weight: 900;
-    color: var(--forest);
-    line-height: 1;
-    margin-bottom: 12px;
-    opacity: 0.4;
-  }
-
-  .step-title {
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--forest-mid);
-    margin-bottom: 8px;
-  }
-
-  .step-desc {
-    font-size: 14px;
-    color: var(--text-secondary);
-    line-height: 1.6;
-  }
-
-  /* ── OFFERS ── */
-  .offers-section { background: #111111; }
-
-  .offers-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 24px;
-    margin-top: 40px;
-  }
-
-  .offer-card {
-    padding: 36px 32px;
-    position: relative;
-  }
-
-  .offer-card.forest-card {
-    background: var(--steel);
-    color: var(--white);
-  }
-
-  .offer-card.gold-card {
-    background: var(--ink);
-    color: var(--white);
-  }
-
-  .offer-tag {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--forest-mid);
-    margin-bottom: 12px;
-  }
-
-  .offer-card.gold-card .offer-tag { color: var(--gold); }
-
-  .offer-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 26px;
-    font-weight: 700;
-    color: var(--white);
-    margin-bottom: 8px;
-    line-height: 1.2;
-  }
-
-  .offer-promise {
-    font-size: 14px;
-    color: #c0c0c0;
-    margin-bottom: 24px;
-    line-height: 1.5;
-  }
-
-  .offer-for {
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: #888;
-    margin-bottom: 8px;
-  }
-
-  .offer-for-text {
-    font-size: 13px;
-    color: #d0d0d0;
-    margin-bottom: 20px;
-    line-height: 1.5;
-  }
-
-  .offer-list {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 24px;
-  }
-
-  .offer-list li {
-    font-size: 13.5px;
-    color: var(--text-secondary);
-    padding: 7px 0 7px 20px;
-    position: relative;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-    line-height: 1.45;
-  }
-
-  .offer-list li:last-child { border-bottom: none; }
-
-  .offer-list li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--forest-mid);
-    font-size: 12px;
-  }
-
-  .offer-card.gold-card .offer-list li::before { color: var(--gold); }
-
-  .price-row {
-    margin-bottom: 24px;
-    padding: 16px;
-    background: rgba(255,255,255,0.05);
-  }
-
-  .price-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: #666;
-    margin-bottom: 6px;
-  }
-
-  .price-tiers {
-    font-size: 13px;
-    color: var(--text-secondary);
-    line-height: 1.8;
-  }
-
-  .price-tiers strong { color: var(--text-primary); }
-
-  .offer-cta {
-    display: block;
-    text-align: center;
-    padding: 14px 24px;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    text-decoration: none;
-    background: var(--forest);
-    color: var(--white);
-    transition: background 0.2s;
-  }
-
-  .offer-card.gold-card .offer-cta { background: var(--gold); color: var(--ink); }
-  .offer-cta:hover { opacity: 0.9; }
-
-  /* ── MEET CORRIE ── */
-  .bio-section { background: #0d0d0d; }
-
-  .bio-grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 48px;
-    align-items: start;
-    margin-top: 36px;
-  }
-
-  .bio-photo {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .bio-text p {
-    font-size: 15px;
-    color: var(--text-secondary);
-    line-height: 1.75;
-    margin-bottom: 16px;
-  }
-
-  .bio-text strong { color: var(--text-primary); }
-
-  .bio-cred-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 20px;
-  }
-
-  .bio-cred {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--text-secondary);
-    padding: 5px 12px;
-  }
-
-  /* ── FINAL CTA ── */
-  .cta-section {
-    background: var(--forest);
-    color: var(--white);
-    text-align: center;
-    padding: 80px 40px;
-  }
-
-  .cta-section h2 {
-    color: var(--white);
-    margin-bottom: 16px;
-  }
-
-  .cta-section .lead {
-    color: rgba(255,255,255,0.8);
-    margin: 0 auto 36px;
-  }
-
-  .cta-urgency {
-    font-size: 13px;
-    color: rgba(255,255,255,0.7);
-    margin-bottom: 32px;
-    letter-spacing: 0.04em;
-  }
-
-  .cta-urgency strong { color: var(--gold); }
-
-  .cta-buttons {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 28px;
-  }
-
-  .btn-white {
-    background: var(--white);
-    color: var(--forest);
-    padding: 18px 36px;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-
-  .btn-outline-white {
-    background: transparent;
-    color: var(--white);
-    padding: 18px 36px;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    text-decoration: none;
-    border: 1px solid rgba(255,255,255,0.4);
-  }
-
-  .cta-contact {
-    font-size: 13px;
-    color: rgba(255,255,255,0.5);
-  }
-
-  .cta-contact a { color: #e0e0e0; text-decoration: none; }
-
-  /* HEADER */
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(13, 13, 13, 0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--rule);
-  }
-
-  .header-inner {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--white);
-    text-decoration: none;
-    letter-spacing: -0.02em;
-  }
-
-  nav {
-    display: flex;
-    gap: 28px;
-    align-items: center;
-  }
-
-  nav a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    transition: color 0.2s;
-  }
-
-  nav a:hover {
-    color: var(--white);
-  }
-
-  .btn-nav {
-    background: var(--forest);
-    color: var(--white);
-    padding: 8px 18px;
-    border-radius: 4px;
-    font-weight: 600;
-    transition: background 0.2s;
-  }
-
-  .btn-nav:hover {
-    background: var(--forest-mid);
-  }
-
-  /* ── FOOTER ── */
-  footer {
-    background: #080808;
-    padding: 32px 40px;
-    text-align: center;
-    font-size: 12px;
-    color: var(--text-muted);
-    line-height: 1.8;
-  }
-
-  footer a { color: var(--text-secondary); text-decoration: none; }
-
-  a:focus-visible {
-    outline: 2px solid var(--gold);
-    outline-offset: 3px;
-  }
-
-  button:focus-visible {
-    outline: 2px solid var(--gold);
-    outline-offset: 3px;
-  }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 700px) {
-    section { padding: 60px 24px; }
-    .hero { padding: 60px 24px 70px; }
-    .steps-row { grid-template-columns: 1fr; }
-    .offers-grid { grid-template-columns: 1fr; }
-    .bio-grid { grid-template-columns: 1fr; }
-    nav { padding: 16px 24px; }
-    .nav-links { display: none; }
-  }
-
-  .footer-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    padding: 40px 24px;
-    text-align: center;
-  }
-  .footer-brand { margin-bottom: 4px; }
-  .footer-logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    color: #f0f0f0;
-    letter-spacing: 0.05em;
-  }
-  footer nav { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
-  footer nav a {
-    color: #b8b8b8;
-    font-size: 0.875rem;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  footer nav a:hover, footer nav a:focus { color: #C8932A; }
-  .footer-contact a {
-    color: #C8932A;
-    font-size: 0.875rem;
-    text-decoration: none;
-  }
-  .footer-contact a:hover { text-decoration: underline; }
-  .footer-legal p {
-    color: #909090;
-    font-size: 0.75rem;
-    margin: 0;
-  }
-
-  .offer-tag { color: #a0a0a0; }
-  .offer-description { color: #c0c0c0; }
-  .step-label { color: #a8a8a8; }
-  .price-tier span { color: #b0b0b0; }
-  .process-step p { color: #c0c0c0; }
-  .bio-text { color: #c8c8c8; }
-  .testimonial-role { color: #a0a0a0; }
-  .trust-item { color: #a8a8a8; letter-spacing: 0.12em; }
-  .nav-links a { color: #b8b8b8; }
-  .cta-urgency { color: #c8c8c8; }
-  .offer-tag { font-size: 0.75rem; }
-  .price-label { font-size: 0.7rem; }
-
-  *:focus-visible {
-    outline: 3px solid #C8932A;
-    outline-offset: 3px;
-    border-radius: 2px;
-  }
-
-  .skip-link {
-    position: absolute;
-    top: -100px;
-    left: 16px;
-    background: #C8932A;
-    color: #0d0d0d;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-weight: 600;
-    z-index: 9999;
-    text-decoration: none;
-    font-size: 0.875rem;
-  }
-  .skip-link:focus { top: 16px; }
-
-  @media (max-width: 600px) {
-    footer nav { gap: 16px; }
-    .footer-inner { gap: 12px; }
-  }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+--ink: #0d0d0d;
+--bone: #141414;
+--forest: #2E6B4F;
+--forest-mid: #3d8a65;
+--forest-light: #1a2e24;
+--gold: #C8932A;
+--gold-light: #1e1608;
+--steel: #1A3A5C;
+--steel-light: #0f1e2e;
+--warm-gray: #111111;
+--mid-gray: #999;
+--rule: #2a2a2a;
+--white: #ffffff;
+--text-primary: #f0f0f0;
+--text-secondary: #b8b8b8;
+--text-muted: #909090;
+--card-bg: #1a1a1a;
+--card-border: #2a2a2a;
+}
+
+html { scroll-behavior: smooth; }
+
+.skip-link {
+position: absolute;
+left: -9999px;
+top: 8px;
+padding: 12px 20px;
+background: var(--forest);
+color: #fff;
+font-weight: 600;
+font-size: 14px;
+z-index: 9999;
+text-decoration: none;
+}
+.skip-link:focus {
+left: 8px;
+}
+
+body {
+overflow-x: hidden;
+font-family: 'DM Sans', sans-serif;
+background: var(--ink);
+color: var(--text-primary);
+font-size: 16px;
+line-height: 1.6;
+}
+
+/* ── HERO ── */
+.hero {
+background: var(--ink);
+color: var(--white);
+padding: 80px 40px 90px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+
+.hero::before {
+content: '';
+position: absolute;
+inset: 0;
+background: radial-gradient(ellipse at 30% 50%, rgba(46,107,79,0.25) 0%, transparent 60%),
+radial-gradient(ellipse at 70% 20%, rgba(200,147,42,0.12) 0%, transparent 50%);
+pointer-events: none;
+}
+
+.hero-inner { position: relative; max-width: 820px; margin: 0 auto; }
+
+.hero-eyebrow {
+font-size: 11px;
+font-weight: 600;
+letter-spacing: 0.22em;
+text-transform: uppercase;
+color: var(--gold);
+margin-bottom: 24px;
+}
+
+.hero h1 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(36px, 6vw, 64px);
+font-weight: 900;
+line-height: 1.08;
+letter-spacing: -0.03em;
+color: var(--white);
+margin-bottom: 28px;
+}
+
+.hero h1 em {
+font-style: italic;
+color: var(--gold);
+}
+
+.hero-sub {
+font-size: clamp(15px, 2vw, 18px);
+font-weight: 300;
+color: #d4d4d4;
+max-width: 700px;
+margin: 0 auto 36px;
+line-height: 1.65;
+}
+
+.hero-sub strong { color: var(--white); font-weight: 600; }
+
+.hero-buttons {
+display: flex;
+gap: 16px;
+justify-content: center;
+flex-wrap: wrap;
+margin-bottom: 40px;
+}
+
+.btn-primary {
+background: var(--forest);
+color: var(--white);
+padding: 16px 32px;
+font-size: 14px;
+font-weight: 600;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+text-decoration: none;
+transition: background 0.2s;
+}
+
+.btn-primary:hover { background: var(--forest-mid); }
+
+.btn-secondary {
+background: transparent;
+color: var(--white);
+padding: 16px 32px;
+font-size: 14px;
+font-weight: 500;
+letter-spacing: 0.04em;
+text-decoration: none;
+border: 1px solid rgba(255,255,255,0.3);
+transition: border-color 0.2s;
+}
+
+.btn-secondary:hover { border-color: var(--white); }
+
+.trust-bar {
+font-size: 11px;
+color: #999;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+}
+
+.trust-bar span {
+color: #777;
+margin: 0 12px;
+}
+
+/* ── SECTIONS ── */
+section { padding: 80px 40px; }
+
+.section-inner { max-width: 900px; margin: 0 auto; }
+
+.section-eyebrow {
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 0.22em;
+text-transform: uppercase;
+color: var(--forest-mid);
+margin-bottom: 16px;
+}
+
+.section-eyebrow.gold { color: var(--gold); }
+
+h2 {
+font-family: 'Playfair Display', serif;
+font-size: clamp(28px, 4vw, 44px);
+font-weight: 700;
+line-height: 1.15;
+letter-spacing: -0.02em;
+color: var(--text-primary);
+margin-bottom: 20px;
+}
+
+h2 em { font-style: italic; color: var(--forest); }
+h2 em.gold { color: var(--gold); }
+
+.lead {
+font-size: 17px;
+font-weight: 400;
+color: var(--text-secondary);
+line-height: 1.7;
+margin-bottom: 24px;
+max-width: 700px;
+}
+
+/* ── PAIN SECTION ── */
+.pain-section { background: #111111; }
+
+.pain-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+gap: 16px;
+margin-top: 36px;
+}
+
+.pain-card {
+background: var(--card-bg);
+padding: 24px;
+border-left: 3px solid var(--gold);
+}
+
+.pain-card .industry {
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 0.18em;
+text-transform: uppercase;
+color: var(--gold);
+margin-bottom: 8px;
+}
+
+.pain-card p {
+font-size: 14px;
+color: var(--text-secondary);
+line-height: 1.6;
+}
+
+/* ── ORIGIN STORY ── */
+.origin-section { background: var(--ink); color: var(--white); }
+
+.origin-section h2 { color: var(--white); }
+.origin-section h2 em { color: var(--gold); }
+
+.origin-section .lead { color: #bbb; }
+
+.verticals {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+margin-top: 28px;
+}
+
+.vertical-tag {
+background: rgba(255,255,255,0.08);
+color: #ccc;
+font-size: 12px;
+font-weight: 500;
+padding: 6px 14px;
+letter-spacing: 0.04em;
+}
+
+.origin-quote {
+border-left: 3px solid var(--gold);
+padding: 20px 24px;
+margin: 36px 0 0;
+background: rgba(200,147,42,0.08);
+}
+
+.origin-quote p {
+font-family: 'Playfair Display', serif;
+font-size: 19px;
+font-style: italic;
+color: var(--white);
+line-height: 1.6;
+}
+
+/* ── PROCESS ── */
+.process-section { background: #0d0d0d; }
+
+.steps-row {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2px;
+margin-top: 36px;
+}
+
+.step-block {
+background: var(--card-bg);
+padding: 32px 24px;
+position: relative;
+border: 1px solid var(--card-border);
+}
+
+.step-num {
+font-family: 'Playfair Display', serif;
+font-size: 52px;
+font-weight: 900;
+color: var(--forest);
+line-height: 1;
+margin-bottom: 12px;
+opacity: 0.4;
+}
+
+.step-title {
+font-size: 14px;
+font-weight: 700;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+color: var(--forest-mid);
+margin-bottom: 8px;
+}
+
+.step-desc {
+font-size: 14px;
+color: var(--text-secondary);
+line-height: 1.6;
+}
+
+/* ── OFFERS ── */
+.offers-section { background: #111111; }
+
+.offers-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+gap: 24px;
+margin-top: 40px;
+}
+
+.offer-card {
+padding: 36px 32px;
+position: relative;
+}
+
+.offer-card.forest-card {
+background: var(--steel);
+color: var(--white);
+}
+
+.offer-card.gold-card {
+background: var(--ink);
+color: var(--white);
+}
+
+.offer-tag {
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 0.2em;
+text-transform: uppercase;
+color: var(--forest-mid);
+margin-bottom: 12px;
+}
+
+.offer-card.gold-card .offer-tag { color: var(--gold); }
+
+.offer-title {
+font-family: 'Playfair Display', serif;
+font-size: 26px;
+font-weight: 700;
+color: var(--white);
+margin-bottom: 8px;
+line-height: 1.2;
+}
+
+.offer-promise {
+font-size: 14px;
+color: #c0c0c0;
+margin-bottom: 24px;
+line-height: 1.5;
+}
+
+.offer-for {
+font-size: 11px;
+font-weight: 700;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+color: #888;
+margin-bottom: 8px;
+}
+
+.offer-for-text {
+font-size: 13px;
+color: #d0d0d0;
+margin-bottom: 20px;
+line-height: 1.5;
+}
+
+.offer-list {
+list-style: none;
+padding: 0;
+margin-bottom: 24px;
+}
+
+.offer-list li {
+font-size: 13.5px;
+color: var(--text-secondary);
+padding: 7px 0 7px 20px;
+position: relative;
+border-bottom: 1px solid rgba(255,255,255,0.07);
+line-height: 1.45;
+}
+
+.offer-list li:last-child { border-bottom: none; }
+
+.offer-list li::before {
+content: '→';
+position: absolute;
+left: 0;
+color: var(--forest-mid);
+font-size: 12px;
+}
+
+.offer-card.gold-card .offer-list li::before { color: var(--gold); }
+
+.price-row {
+margin-bottom: 24px;
+padding: 16px;
+background: rgba(255,255,255,0.05);
+}
+
+.price-label {
+font-size: 10px;
+font-weight: 700;
+letter-spacing: 0.15em;
+text-transform: uppercase;
+color: #666;
+margin-bottom: 6px;
+}
+
+.price-tiers {
+font-size: 13px;
+color: var(--text-secondary);
+line-height: 1.8;
+}
+
+.price-tiers strong { color: var(--text-primary); }
+
+.offer-cta {
+display: block;
+text-align: center;
+padding: 14px 24px;
+font-size: 13px;
+font-weight: 700;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+text-decoration: none;
+background: var(--forest);
+color: var(--white);
+transition: background 0.2s;
+}
+
+.offer-card.gold-card .offer-cta { background: var(--gold); color: var(--ink); }
+.offer-cta:hover { opacity: 0.9; }
+
+/* ── MEET CORRIE ── */
+.bio-section { background: #0d0d0d; }
+
+.bio-grid {
+display: grid;
+grid-template-columns: 1fr 2fr;
+gap: 48px;
+align-items: start;
+margin-top: 36px;
+}
+
+.bio-photo {
+width: 100%;
+height: auto;
+display: block;
+}
+
+.bio-text p {
+font-size: 15px;
+color: var(--text-secondary);
+line-height: 1.75;
+margin-bottom: 16px;
+}
+
+.bio-text strong { color: var(--text-primary); }
+
+.bio-cred-row {
+display: flex;
+flex-wrap: wrap;
+gap: 8px;
+margin-top: 20px;
+}
+
+.bio-cred {
+background: var(--card-bg);
+border: 1px solid var(--card-border);
+font-size: 12px;
+font-weight: 500;
+color: var(--text-secondary);
+padding: 5px 12px;
+}
+
+/* ── FINAL CTA ── */
+.cta-section {
+background: var(--forest);
+color: var(--white);
+text-align: center;
+padding: 80px 40px;
+}
+
+.cta-section h2 {
+color: var(--white);
+margin-bottom: 16px;
+}
+
+.cta-section .lead {
+color: rgba(255,255,255,0.8);
+margin: 0 auto 36px;
+}
+
+.cta-urgency {
+font-size: 13px;
+color: rgba(255,255,255,0.7);
+margin-bottom: 32px;
+letter-spacing: 0.04em;
+}
+
+.cta-urgency strong { color: var(--gold); }
+
+.cta-buttons {
+display: flex;
+gap: 16px;
+justify-content: center;
+flex-wrap: wrap;
+margin-bottom: 28px;
+}
+
+.btn-white {
+background: var(--white);
+color: var(--forest);
+padding: 18px 36px;
+font-size: 14px;
+font-weight: 700;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+text-decoration: none;
+}
+
+.btn-outline-white {
+background: transparent;
+color: var(--white);
+padding: 18px 36px;
+font-size: 14px;
+font-weight: 500;
+letter-spacing: 0.04em;
+text-decoration: none;
+border: 1px solid rgba(255,255,255,0.4);
+}
+
+.cta-contact {
+font-size: 13px;
+color: rgba(255,255,255,0.5);
+}
+
+.cta-contact a { color: #e0e0e0; text-decoration: none; }
+
+/* HEADER */
+header {
+position: sticky;
+top: 0;
+z-index: 100;
+background: rgba(13, 13, 13, 0.95);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid var(--rule);
+}
+
+.header-inner {
+max-width: 1400px;
+margin: 0 auto;
+padding: 20px 40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.logo {
+font-family: 'Playfair Display', serif;
+font-size: 20px;
+font-weight: 700;
+color: var(--white);
+text-decoration: none;
+letter-spacing: -0.02em;
+}
+
+nav {
+display: flex;
+gap: 28px;
+align-items: center;
+}
+
+nav a {
+color: var(--text-secondary);
+text-decoration: none;
+font-size: 13px;
+font-weight: 500;
+letter-spacing: 0.04em;
+transition: color 0.2s;
+}
+
+nav a:hover {
+color: var(--white);
+}
+
+.btn-nav {
+background: var(--forest);
+color: var(--white);
+padding: 8px 18px;
+border-radius: 4px;
+font-weight: 600;
+transition: background 0.2s;
+}
+
+.btn-nav:hover {
+background: var(--forest-mid);
+}
+
+/* ── FOOTER ── */
+footer {
+background: #080808;
+padding: 32px 40px;
+text-align: center;
+font-size: 12px;
+color: var(--text-muted);
+line-height: 1.8;
+}
+
+footer a { color: var(--text-secondary); text-decoration: none; }
+
+a:focus-visible {
+outline: 2px solid var(--gold);
+outline-offset: 3px;
+}
+
+button:focus-visible {
+outline: 2px solid var(--gold);
+outline-offset: 3px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+section { padding: 60px 24px; }
+.hero { padding: 60px 24px 70px; }
+.steps-row { grid-template-columns: 1fr; }
+.offers-grid { grid-template-columns: 1fr; }
+.bio-grid { grid-template-columns: 1fr; }
+nav { padding: 16px 24px; }
+.nav-links { display: none; }
+}
+
+.footer-inner {
+max-width: 900px;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 16px;
+padding: 40px 24px;
+text-align: center;
+}
+.footer-brand { margin-bottom: 4px; }
+.footer-logo {
+font-family: 'Playfair Display', serif;
+font-size: 1.2rem;
+color: #f0f0f0;
+letter-spacing: 0.05em;
+}
+footer nav { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+footer nav a {
+color: #b8b8b8;
+font-size: 0.875rem;
+text-decoration: none;
+transition: color 0.2s;
+}
+footer nav a:hover, footer nav a:focus { color: #C8932A; }
+.footer-contact a {
+color: #C8932A;
+font-size: 0.875rem;
+text-decoration: none;
+}
+.footer-contact a:hover { text-decoration: underline; }
+.footer-legal p {
+color: #909090;
+font-size: 0.75rem;
+margin: 0;
+}
+
+.offer-tag { color: #a0a0a0; }
+.offer-description { color: #c0c0c0; }
+.step-label { color: #a8a8a8; }
+.price-tier span { color: #b0b0b0; }
+.process-step p { color: #c0c0c0; }
+.bio-text { color: #c8c8c8; }
+.testimonial-role { color: #a0a0a0; }
+.trust-item { color: #a8a8a8; letter-spacing: 0.12em; }
+.nav-links a { color: #b8b8b8; }
+.cta-urgency { color: #c8c8c8; }
+.offer-tag { font-size: 0.75rem; }
+.price-label { font-size: 0.7rem; }
+
+*:focus-visible {
+outline: 3px solid #C8932A;
+outline-offset: 3px;
+border-radius: 2px;
+}
+
+.skip-link {
+position: absolute;
+top: -100px;
+left: 16px;
+background: #C8932A;
+color: #0d0d0d;
+padding: 8px 16px;
+border-radius: 4px;
+font-weight: 600;
+z-index: 9999;
+text-decoration: none;
+font-size: 0.875rem;
+}
+.skip-link:focus { top: 16px; }
+
+@media (max-width: 600px) {
+footer nav { gap: 16px; }
+.footer-inner { gap: 12px; }
+}
 
 </style>
 </head>
@@ -727,221 +727,224 @@
 
 <a href="#main-content" class="skip-link">Skip to main content</a>
 <header role="banner">
-  <div class="header-inner">
-    <a href="/" class="logo"><img src="/favicon.png" alt="" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;"><span style="color: #3d8a65;">infra</span>STRISIS Labs<span style="color: #C8932A;">™</span></a>
-    <nav aria-label="Main navigation">
-      <a href="#problem">The Problem</a>
-      <a href="/services">Services</a>
-      <a href="#about">About</a>
-      <a href="/services" class="btn-nav">Book a Session</a>
-    </nav>
-  </div>
+<div class="header-inner">
+<a href="/" class="logo"><img src="/favicon.png" alt="" style="width: 24px; height: 24px; vertical-align: middle; margin-right: 8px;"><span style="color: #3d8a65;">infra</span>STRISIS Labs<span style="color: #C8932A;">™</span></a>
+<nav aria-label="Main navigation">
+<a href="#problem">The Problem</a>
+<a href="/services">Services</a>
+<a href="#about">About</a>
+<a href="/services" class="btn-nav">Book a Session</a>
+</nav>
+</div>
 </header>
 
 <main id="main-content">
 
 <section class="hero" aria-label="Introduction">
-  <div class="hero-inner">
-    <div class="hero-eyebrow">Infrastrisis™ Methodology</div>
-    <h1>The chaos looks different in every industry.<br>The pattern is always the same.</h1>
-    <p class="hero-sub">Most organizations don't have a visibility problem. They have a <strong>structural gap</strong> no one has named yet. infraSTRISIS&#8482; maps it, prioritizes it, and builds the infrastructure to close it.</p>
-    <div class="hero-buttons">
-      <a href="/services" class="btn-primary">Start with the Operations Audit</a>
-      <a href="#start-here" class="btn-secondary">Not sure where to start?</a>
-    </div>
-    <div class="trust-bar">
-      Execution Gaps <span>·</span> Scaling Failures <span>·</span> Compliance Exposure <span>·</span> Structural Fracture <span>·</span> Operational Drift
-    </div>
-  </div>
+<div class="hero-inner">
+<div class="hero-eyebrow">Infrastrisis™ Methodology</div>
+<h1>The chaos looks different in every industry.<br>The pattern is always the same.</h1>
+<p class="hero-sub">Most organizations don't have a visibility problem. They have a <strong>structural gap</strong> no one has named yet. infraSTRISIS&#8482; maps it, prioritizes it, and builds the infrastructure to close it.</p>
+<div class="hero-buttons">
+<a href="/services" class="btn-primary">Start with the Operations Audit</a>
+<a href="#start-here" class="btn-secondary">Not sure where to start?</a>
+</div>
+<div class="trust-bar">
+Execution Gaps <span>·</span> Scaling Failures <span>·</span> Compliance Exposure <span>·</span> Structural Fracture <span>·</span> Operational Drift
+</div>
+</div>
+</section>
+
+<!-- CHANGE 2: origin-section moved above pain-section -->
+<section class="origin-section" aria-label="Why I See What Others Miss">
+<div class="section-inner">
+<div class="section-eyebrow">Why We See What Others Miss</div>
+<h2>We didn't study broken systems.<br>We <em>worked inside</em> them.</h2>
+<p class="lead">15+ years across industries not as researchers, but as operators inside the chaos. Every role taught us to recognize the same fracture patterns showing up in completely different settings.</p>
+<div class="verticals">
+<span class="vertical-tag">Fast Food Operations</span>
+<span class="vertical-tag">Call Centers</span>
+<span class="vertical-tag">Casino VIP &amp; Customer Care</span>
+<span class="vertical-tag">Federal Government</span>
+<span class="vertical-tag">State Government</span>
+<span class="vertical-tag">SaaS Companies</span>
+<span class="vertical-tag">Biotech</span>
+<span class="vertical-tag">Hospital Systems</span>
+<span class="vertical-tag">People Operations &amp; HR</span>
+<span class="vertical-tag">Housing Navigation</span>
+<span class="vertical-tag">Nonprofit Governance</span>
+<span class="vertical-tag">Federal Compliance</span>
+</div>
+</div>
 </section>
 
 <section style="background:#0a0a0a; padding:64px 40px;" id="start-here" aria-label="Start Here">
-  <div class="section-inner">
-    <div class="section-eyebrow gold">Start Here</div>
-    <h2 style="margin-bottom:12px;">Where do you fit?</h2>
-    <p class="lead" style="margin-bottom:36px;">infraSTRISIS™ works at two levels. Same methodology. Different application.</p>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2px;">
-      <div style="background:var(--card-bg); border-top:3px solid var(--forest-mid); padding:32px 28px;">
-        <div style="font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--forest-mid); margin-bottom:12px;">For Organizations</div>
-        <p style="font-size:17px; font-weight:600; color:var(--text-primary); margin-bottom:12px; line-height:1.3;">You lead a team, department, or company that's not operating the way it should.</p>
-        <p style="font-size:14px; color:var(--text-secondary); line-height:1.65; margin-bottom:24px;">The execution gaps are real but hard to name. Compliance exposure is building. People are slipping through handoff cracks. You need a hard diagnostic, not another consultant's opinion.</p>
-        <a href="/services" style="display:inline-block; padding:12px 24px; background:var(--forest); color:var(--white); font-size:13px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; text-decoration:none;">See the Operations Audit</a>
-      </div>
-      <div style="background:var(--card-bg); border-top:3px solid var(--gold); padding:32px 28px;">
-        <div style="font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:12px;">For Individuals</div>
-        <p style="font-size:17px; font-weight:600; color:var(--text-primary); margin-bottom:12px; line-height:1.3;">You're navigating a system that wasn't built for you and you need expert oversight at every step.</p>
-        <p style="font-size:14px; color:var(--text-secondary); line-height:1.65; margin-bottom:24px;">Healthcare, housing, government benefits, employment disputes. You shouldn't have to figure this out alone. Individual advocacy is available by consultation.</p>
-        <a href="mailto:info@infrastrisis.com" style="display:inline-block; padding:12px 24px; background:var(--gold); color:var(--ink); font-size:13px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; text-decoration:none;">Request a Consultation</a>
-      </div>
-    </div>
-  </div>
+<div class="section-inner">
+<div class="section-eyebrow gold">Start Here</div>
+<h2 style="margin-bottom:12px;">Where do you fit?</h2>
+<!-- CHANGE 3: Audit-first framing added before the two-path cards -->
+<p class="lead" style="margin-bottom:16px;">Almost every engagement begins with the Operations Audit. The Audit determines what's actually broken and whether deeper work is warranted. From there, the path is built around your specific situation.</p>
+<p style="font-size:13px; color:var(--text-muted); letter-spacing:0.06em; text-transform:uppercase; margin-bottom:32px;">infraSTRISIS™ works at two levels. Same methodology. Different application.</p>
+<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:2px;">
+<div style="background:var(--card-bg); border-top:3px solid var(--forest-mid); padding:32px 28px;">
+<div style="font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--forest-mid); margin-bottom:12px;">For Organizations</div>
+<p style="font-size:17px; font-weight:600; color:var(--text-primary); margin-bottom:12px; line-height:1.3;">You lead a team, department, or company that's not operating the way it should.</p>
+<p style="font-size:14px; color:var(--text-secondary); line-height:1.65; margin-bottom:24px;">The execution gaps are real but hard to name. Compliance exposure is building. People are slipping through handoff cracks. You need a hard diagnostic, not another consultant's opinion.</p>
+<a href="/services" style="display:inline-block; padding:12px 24px; background:var(--forest); color:var(--white); font-size:13px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; text-decoration:none;">See the Operations Audit</a>
+</div>
+<div style="background:var(--card-bg); border-top:3px solid var(--gold); padding:32px 28px;">
+<div style="font-size:10px; font-weight:700; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:12px;">For Individuals</div>
+<p style="font-size:17px; font-weight:600; color:var(--text-primary); margin-bottom:12px; line-height:1.3;">You're navigating a system that wasn't built for you and you need expert oversight at every step.</p>
+<p style="font-size:14px; color:var(--text-secondary); line-height:1.65; margin-bottom:24px;">Healthcare, housing, government benefits, employment disputes. You shouldn't have to figure this out alone. Individual advocacy is available by consultation.</p>
+<a href="mailto:info@infrastrisis.com" style="display:inline-block; padding:12px 24px; background:var(--gold); color:var(--ink); font-size:13px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; text-decoration:none;">Request a Consultation</a>
+</div>
+</div>
+</div>
 </section>
 
 <section class="pain-section" id="problem" aria-label="The Problem">
-  <div class="section-inner">
-    <div class="section-eyebrow gold">The Problem No One Has Named</div>
-    <h2>The chaos looks different<br>in every setting.<br>The <em class="gold">pattern is always the same.</em></h2>
-    <p class="lead">Invisible gaps in people, processes, and systems slow execution, expose compliance risk, and create structural breakdown. No one can see the source because they're too close to the operations. We step in to run hard diagnostics.</p>
-    <div class="pain-grid">
-      <div class="pain-card">
-        <div class="industry">Hospital Systems</div>
-        <p>Staff burning out mid-shift. Patients falling through handoff gaps. Leadership unable to see where the system is actually fracturing until someone gets hurt.</p>
-      </div>
-      <div class="pain-card">
-        <div class="industry">SaaS &amp; Tech</div>
-        <p>Scaling too fast with no people infrastructure underneath. HR policies that don't match the culture. Teams in chaos while the product roadmap looks clean.</p>
-      </div>
-      <div class="pain-card">
-        <div class="industry">Government &amp; Compliance</div>
-        <p>Federal program requirements that no one actually understands operationally. Compliance theater instead of real infrastructure. One gap away from exposure.</p>
-      </div>
-      <div class="pain-card">
-        <div class="industry">Housing &amp; Nonprofits</div>
-        <p>Families bouncing between five agencies with zero real navigation. Good mission, broken systems. One policy glitch away from losing funding and trust.</p>
-      </div>
-      <div class="pain-card">
-        <div class="industry">Corporate HR &amp; Ops</div>
-        <p>Reorganizations that leave people without roles or clarity. Benefits systems that don't serve the workforce they're supposed to protect. Invisible execution drag at scale.</p>
-      </div>
-      <div class="pain-card">
-        <div class="industry">Biotech &amp; Regulated Industries</div>
-        <p>Compliance requirements colliding with rapid growth. Human systems that can't keep pace with regulatory demands. Infrastructure that was never designed for this pressure.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="origin-section" aria-label="Why I See What Others Miss">
-  <div class="section-inner">
-    <div class="section-eyebrow">Why We See What Others Miss</div>
-    <h2>We didn't study broken systems.<br>We <em>worked inside</em> them.</h2>
-    <p class="lead">15+ years across industries not as researchers, but as operators inside the chaos. Every role taught us to recognize the same fracture patterns showing up in completely different settings.</p>
-    <div class="verticals">
-      <span class="vertical-tag">Fast Food Operations</span>
-      <span class="vertical-tag">Call Centers</span>
-      <span class="vertical-tag">Casino VIP &amp; Customer Care</span>
-      <span class="vertical-tag">Federal Government</span>
-      <span class="vertical-tag">State Government</span>
-      <span class="vertical-tag">SaaS Companies</span>
-      <span class="vertical-tag">Biotech</span>
-      <span class="vertical-tag">Hospital Systems</span>
-      <span class="vertical-tag">People Operations &amp; HR</span>
-      <span class="vertical-tag">Housing Navigation</span>
-      <span class="vertical-tag">Nonprofit Governance</span>
-      <span class="vertical-tag">Federal Compliance</span>
-    </div>
-
-  </div>
+<div class="section-inner">
+<div class="section-eyebrow gold">The Problem No One Has Named</div>
+<h2>The chaos looks different<br>in every setting.<br>The <em class="gold">pattern is always the same.</em></h2>
+<p class="lead">Invisible gaps in people, processes, and systems slow execution, expose compliance risk, and create structural breakdown. No one can see the source because they're too close to the operations. We step in to run hard diagnostics.</p>
+<div class="pain-grid">
+<div class="pain-card">
+<div class="industry">Hospital Systems</div>
+<p>Staff burning out mid-shift. Patients falling through handoff gaps. Leadership unable to see where the system is actually fracturing until someone gets hurt.</p>
+</div>
+<div class="pain-card">
+<div class="industry">SaaS &amp; Tech</div>
+<p>Scaling too fast with no people infrastructure underneath. HR policies that don't match the culture. Teams in chaos while the product roadmap looks clean.</p>
+</div>
+<div class="pain-card">
+<div class="industry">Government &amp; Compliance</div>
+<p>Federal program requirements that no one actually understands operationally. Compliance theater instead of real infrastructure. One gap away from exposure.</p>
+</div>
+<div class="pain-card">
+<div class="industry">Housing &amp; Nonprofits</div>
+<p>Families bouncing between five agencies with zero real navigation. Good mission, broken systems. One policy glitch away from losing funding and trust.</p>
+</div>
+<div class="pain-card">
+<div class="industry">Corporate HR &amp; Ops</div>
+<p>Reorganizations that leave people without roles or clarity. Benefits systems that don't serve the workforce they're supposed to protect. Invisible execution drag at scale.</p>
+</div>
+<div class="pain-card">
+<div class="industry">Biotech &amp; Regulated Industries</div>
+<p>Compliance requirements colliding with rapid growth. Human systems that can't keep pace with regulatory demands. Infrastructure that was never designed for this pressure.</p>
+</div>
+</div>
+</div>
 </section>
 
 <section class="process-section" id="how" aria-label="The Infrastrisis Method">
-  <div class="section-inner">
-    <div class="section-eyebrow">The Infrastrisis Method</div>
-    <h2>Three steps. One system.<br><em>Real-world stabilization.</em></h2>
-    <p class="lead">Built on a single diagnostic engine, we stabilize system fractures whether they occur inside a complex organization or a household under extreme stress.</p>
-    <div class="steps-row">
-      <div class="step-block">
-        <div class="step-num">01</div>
-        <div class="step-title">Map</div>
-        <div class="step-desc">We uncover the hidden infrastructure driving the problem: the invisible blockages, the fracture points, the gaps no one has named yet. You finally see the full operational picture.</div>
-      </div>
-      <div class="step-block">
-        <div class="step-num">02</div>
-        <div class="step-title">Build</div>
-        <div class="step-desc">We install high-impact structural fixes: stronger decision workflows, real representation for the unheard, or governance that holds under high-stress conditions.</div>
-      </div>
-      <div class="step-block">
-        <div class="step-num">03</div>
-        <div class="step-title">Deploy</div>
-        <div class="step-desc">Hands-on implementation support with outcome tracking. Execution accelerates. Handoffs smooth. People stop falling through the cracks. Results in real time.</div>
-      </div>
-    </div>
-  </div>
+<div class="section-inner">
+<div class="section-eyebrow">The Infrastrisis Method</div>
+<h2>Three steps. One system.<br><em>Real-world stabilization.</em></h2>
+<p class="lead">Built on a single diagnostic engine, we stabilize system fractures whether they occur inside a complex organization or a household under extreme stress.</p>
+<div class="steps-row">
+<div class="step-block">
+<div class="step-num">01</div>
+<div class="step-title">Map</div>
+<div class="step-desc">We uncover the hidden infrastructure driving the problem: the invisible blockages, the fracture points, the gaps no one has named yet. You finally see the full operational picture.</div>
+</div>
+<div class="step-block">
+<div class="step-num">02</div>
+<div class="step-title">Build</div>
+<div class="step-desc">We install high-impact structural fixes: stronger decision workflows, real representation for the unheard, or governance that holds under high-stress conditions.</div>
+</div>
+<div class="step-block">
+<div class="step-num">03</div>
+<div class="step-title">Deploy</div>
+<div class="step-desc">Hands-on implementation support with outcome tracking. Execution accelerates. Handoffs smooth. People stop falling through the cracks. Results in real time.</div>
+</div>
+</div>
+</div>
 </section>
 
 <section class="offers-section" id="services" aria-label="Services">
-  <div class="section-inner">
-    <div class="section-eyebrow">Where to Start</div>
-    <h2>Every engagement begins with<br>an <em>Operations Audit.</em></h2>
-    <p style="font-size:16px; color:var(--text-secondary); line-height:1.75; max-width:680px; margin-bottom:32px;">Before recommending a Sprint, advocacy engagement, or enterprise intervention, we map the system, identify the fracture points, and determine whether deeper work is warranted. Most organizations don't need more advice. They need clarity about where the system is actually breaking.</p>
-    <div style="text-align: center;">
-      <a href="/services" class="btn-primary" style="display: inline-block; padding: 18px 40px; font-size: 17px;">See Services &amp; Pricing</a>
-    </div>
-  </div>
+<div class="section-inner">
+<div class="section-eyebrow">Where to Start</div>
+<h2>Every engagement begins with<br>an <em>Operations Audit.</em></h2>
+<p style="font-size:16px; color:var(--text-secondary); line-height:1.75; max-width:680px; margin-bottom:32px;">Before recommending a Sprint, advocacy engagement, or enterprise intervention, we map the system, identify the fracture points, and determine whether deeper work is warranted. Most organizations don't need more advice. They need clarity about where the system is actually breaking.</p>
+<div style="text-align: center;">
+<a href="/services" class="btn-primary" style="display: inline-block; padding: 18px 40px; font-size: 17px;">See Services &amp; Pricing</a>
+</div>
+</div>
 </section>
 
 <section style="background:#111111; padding:80px 40px;" aria-label="Testimonials">
-  <div class="section-inner">
-    <div class="section-eyebrow" style="color:var(--gold)">Early Signals</div>
-    <h2 style="color:#ffffff; margin-bottom:40px;">What the first people in the room said.</h2>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px;">
-      <div style="background:rgba(255,255,255,0.05); border-top:3px solid var(--gold); padding:28px 24px;">
-        <p style="font-size:17px; color:#ffffff; line-height:1.7; font-style:italic; margin-bottom:20px;">"Your passion for others is evident."</p>
-        <div style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold);">Former CEO &amp; Entrepreneur</div>
-      </div>
-      <div style="background:rgba(255,255,255,0.05); border-top:3px solid var(--forest); padding:28px 24px;">
-        <p style="font-size:17px; color:#ffffff; line-height:1.7; font-style:italic; margin-bottom:20px;">"This kind of work has always been a part of who I am."</p>
-        <div style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--forest-mid);">Legal Professional</div>
-      </div>
-      <div style="background:rgba(255,255,255,0.05); border-top:3px solid var(--gold); padding:28px 24px;">
-        <p style="font-size:17px; color:#ffffff; line-height:1.7; font-style:italic; margin-bottom:20px;">"I am excited and support your mission."</p>
-        <div style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold);">Advisor</div>
-      </div>
-    </div>
-  </div>
+<div class="section-inner">
+<div class="section-eyebrow" style="color:var(--gold)">Early Signals</div>
+<h2 style="color:#ffffff; margin-bottom:40px;">What the first people in the room said.</h2>
+<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px;">
+<div style="background:rgba(255,255,255,0.05); border-top:3px solid var(--gold); padding:28px 24px;">
+<p style="font-size:17px; color:#ffffff; line-height:1.7; font-style:italic; margin-bottom:20px;">"Your passion for others is evident."</p>
+<div style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold);">Former CEO &amp; Entrepreneur</div>
+</div>
+<div style="background:rgba(255,255,255,0.05); border-top:3px solid var(--forest); padding:28px 24px;">
+<p style="font-size:17px; color:#ffffff; line-height:1.7; font-style:italic; margin-bottom:20px;">"This kind of work has always been a part of who I am."</p>
+<div style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--forest-mid);">Legal Professional</div>
+</div>
+<div style="background:rgba(255,255,255,0.05); border-top:3px solid var(--gold); padding:28px 24px;">
+<p style="font-size:17px; color:#ffffff; line-height:1.7; font-style:italic; margin-bottom:20px;">"I am excited and support your mission."</p>
+<div style="font-size:11px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold);">Advisor</div>
+</div>
+</div>
+</div>
 </section>
 
 <section class="bio-section" id="about" aria-label="About Corrie">
-  <div class="section-inner">
-    <div class="section-eyebrow">About Corrie</div>
-    <h2>Most consultants study systems.<br>She spent 15+ years working <em>inside</em> them.</h2>
-    <div class="bio-grid">
-      <img src="/corrie-headshot.png" alt="Corrie Elle, Founder of infraSTRISIS™ Labs" class="bio-photo">
-      <div class="bio-text">
-        <p>"The work we do together isn't a transaction. It's a relationship built on mutual investment in survival of the human experience. As we grow closer, the methodologies we apply scale as well."</p>
-        <p><strong>Corrie Al Momani</strong> is an operational stewardship professional with 15+ years in People Operations, HR systems, program governance, and compliance. She built the infraSTRISIS™ framework inside complex, high-friction systems including hospitals, government compliance, fast-growth tech, and direct family navigation advocacy.</p>
-        <p>The infraSTRISIS™ framework applies that same pattern recognition to organizations facing operational fracture and to individuals who need expert oversight inside systems that were not designed to serve them.</p>
-        <div class="bio-cred-row">
-          <span class="bio-cred">15+ Years Systems Ops</span>
-          <span class="bio-cred">Compliance Architecture</span>
-          <span class="bio-cred">Methodology Development</span>
-          <span class="bio-cred">Dedicated Advocacy</span>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="section-inner">
+<div class="section-eyebrow">About Corrie</div>
+<h2>Most consultants study systems.<br>She spent 15+ years working <em>inside</em> them.</h2>
+<div class="bio-grid">
+<img src="/corrie-headshot.png" alt="Corrie Elle, Founder of infraSTRISIS™ Labs" class="bio-photo">
+<div class="bio-text">
+<p>"The work we do together isn't a transaction. It's a relationship built on mutual investment in survival of the human experience. As we grow closer, the methodologies we apply scale as well."</p>
+<p><strong>Corrie Al Momani</strong> is an operational stewardship professional with 15+ years in People Operations, HR systems, program governance, and compliance. She built the infraSTRISIS™ framework inside complex, high-friction systems including hospitals, government compliance, fast-growth tech, and direct family navigation advocacy.</p>
+<p>The infraSTRISIS™ framework applies that same pattern recognition to organizations facing operational fracture and to individuals who need expert oversight inside systems that were not designed to serve them.</p>
+<div class="bio-cred-row">
+<span class="bio-cred">15+ Years Systems Ops</span>
+<span class="bio-cred">Compliance Architecture</span>
+<span class="bio-cred">Methodology Development</span>
+<span class="bio-cred">Dedicated Advocacy</span>
+</div>
+</div>
+</div>
+</div>
 </section>
 
 <section class="cta-section" id="contact" aria-label="Book a Session">
-  <div class="section-inner">
-    <h2>The pattern is already present.<br>Most organizations just don't have a way to see it yet.</h2>
-    <p class="lead">One conversation exposes the gaps before they cost you everything. Start with a Diagnostic Session.</p>
-    <div class="cta-urgency">The Diagnostic Session is the entry point. What happens next is by engagement.</div>
-    <div class="cta-buttons">
-      <a href="mailto:info@infrastrisis.com" class="btn-white">Send a Direct Message</a>
-    </div>
-    <p>Diagnostic Sessions are available by request. Direct messages are always open.</p>
-  </div>
+<div class="section-inner">
+<h2>The pattern is already present.<br>Most organizations just don't have a way to see it yet.</h2>
+<p class="lead">One conversation exposes the gaps before they cost you everything. Start with a Diagnostic Session.</p>
+<div class="cta-urgency">The Diagnostic Session is the entry point. What happens next is by engagement.</div>
+<div class="cta-buttons">
+<a href="mailto:info@infrastrisis.com" class="btn-white">Send a Direct Message</a>
+</div>
+<p>Diagnostic Sessions are available by request. Direct messages are always open.</p>
+</div>
 </section>
 
 </main>
 
 <footer role="contentinfo" aria-label="Site footer">
-  <div class="footer-inner">
-    <div class="footer-brand">
-      <span class="footer-logo" aria-label="infraSTRISIS Labs"><img src="/favicon.png" alt="" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;"><span style="color: #3d8a65;">infra</span>STRISIS Labs<span style="color: #C8932A;">™</span></span>
-    </div>
-    <nav aria-label="Footer navigation">
-      <a href="#problem">The Problem</a>
-      <a href="/services">Services</a>
-      <a href="#about">About</a>
-      <a href="mailto:info@infrastrisis.com">Contact</a>
-    </nav>
-    <div class="footer-contact">
-      © 2026 infraSTRISIS Labs™<br>
-      <span style="font-size: 10px; color: var(--text-muted);">Multiple access tiers. Same methodology.</span>
-    </div>
-  </div>
+<div class="footer-inner">
+<div class="footer-brand">
+<span class="footer-logo" aria-label="infraSTRISIS Labs"><img src="/favicon.png" alt="" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 8px;"><span style="color: #3d8a65;">infra</span>STRISIS Labs<span style="color: #C8932A;">™</span></span>
+</div>
+<nav aria-label="Footer navigation">
+<a href="#problem">The Problem</a>
+<a href="/services">Services</a>
+<a href="#about">About</a>
+<a href="mailto:info@infrastrisis.com">Contact</a>
+</nav>
+<div class="footer-contact">
+<!-- CHANGE 1: © 2026 Corrie Elle™ -->
+&#169; 2026 Corrie Elle&#8482;<br>
+<span style="font-size: 10px; color: var(--text-muted);">Multiple access tiers. Same methodology.</span>
+</div>
+</div>
 </footer>
 </body>
 </html>
