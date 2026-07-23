@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="robots" content="index, follow, noarchive, noai, noimageai">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>infraSTRISIS™ Labs | Operational Risk Visibility</title>
-<meta name="description" content="infraSTRISIS™ Labs helps scaling organizations identify hidden operational risk, decision bottlenecks, and structural gaps through a focused Operations Audit.">
+<title>MakeReady by infraSTRISIS™ Labs | Voice to Work Order</title>
+<meta name="description" content="MakeReady is voice-to-work-order software for on-site maintenance teams. Book a demo to see it work.">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -92,7 +92,8 @@
     position: absolute; inset: 0; opacity: 0.14; pointer-events: none;
   }
   .hero .wrap { position: relative; }
-  .hero-sub { font-size: clamp(20px, 2.4vw, 26px); color: var(--white); font-weight: 500; max-width: 30ch; margin: 22px 0 26px; line-height: 1.45; }
+  .hero-sub { font-size: clamp(20px, 2.4vw, 26px); color: var(--white); font-weight: 500; max-width: 34ch; margin: 22px 0 26px; line-height: 1.45; }
+  .hero-for { color: var(--text-secondary); font-size: 16px; max-width: 46ch; }
 
   /* Sections */
   section { padding: 96px 0; }
@@ -105,36 +106,6 @@
     padding: 16px 20px; font-size: 15px; color: var(--text-primary); font-weight: 500;
   }
 
-  .deliverables { list-style: none; margin: 30px 0; max-width: 640px; }
-  .deliverables li {
-    padding: 16px 0 16px 34px; border-bottom: 1px solid var(--rule); position: relative;
-    color: var(--text-primary); font-weight: 500;
-  }
-  .deliverables li::before {
-    content: ""; position: absolute; left: 0; top: 24px; width: 14px; height: 14px;
-    border: 2px solid var(--gold); transform: rotate(45deg);
-  }
-
-  .steps { counter-reset: step; margin-top: 44px; display: grid; gap: 0; }
-  .step {
-    display: grid; grid-template-columns: 72px 1fr; gap: 26px;
-    padding: 34px 0; border-top: 1px solid var(--rule); position: relative;
-  }
-  .step:last-child { border-bottom: 1px solid var(--rule); }
-  .step-num {
-    font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 900;
-    color: var(--gold); line-height: 1;
-  }
-  .step h3 { margin-bottom: 10px; color: var(--white); }
-  .step ul { margin: 10px 0 14px 20px; color: var(--text-secondary); }
-  .step ul li { margin-bottom: 8px; }
-
-  .thesis {
-    font-family: 'Playfair Display', serif; font-size: clamp(22px, 3vw, 30px);
-    color: var(--gold-soft); font-weight: 700; line-height: 1.5; max-width: 26ch;
-    border-left: 3px solid var(--gold); padding-left: 28px; margin: 44px 0 10px;
-  }
-
   .proof-band { background: var(--navy-deep); text-align: center; position: relative; overflow: hidden; }
   .proof-band .wrap { position: relative; }
   .proof-band p { margin-left: auto; margin-right: auto; }
@@ -142,7 +113,6 @@
     font-family: 'Playfair Display', serif; font-size: clamp(22px, 3vw, 32px);
     color: var(--white); font-weight: 700; max-width: 34ch; margin: 30px auto;
   }
-  .proof-close { color: var(--gold-soft); font-weight: 600; letter-spacing: 0.04em; font-size: 18px; }
 
   .final-cta { text-align: center; background: linear-gradient(160deg, var(--navy-panel) 0%, var(--navy-deep) 100%); }
   .final-cta p { margin-left: auto; margin-right: auto; }
@@ -157,8 +127,6 @@
   .copyright { color: var(--text-muted); font-size: 14px; }
   @media (max-width: 640px) {
     section { padding: 72px 0; }
-    .step { grid-template-columns: 48px 1fr; gap: 16px; }
-    .step-num { font-size: 30px; }
   }
 </style>
 </head>
@@ -169,18 +137,15 @@
   <div class="nav-inner">
     <a href="/" class="logo"><img src="/favicon.png" alt=""><span class="infra">infra</span>STRISIS Labs<span class="tm">™</span></a>
     <nav aria-label="Main navigation">
-      <a href="#who">Who It's For</a>
-      <a href="#reveals">The Audit</a>
-      <a href="#how">How It Works</a>
-      <a href="/services">Services</a>
-      <a href="https://calendly.com/infrastrisis/audit" class="btn-nav" target="_blank" rel="noopener">Request a Conversation</a>
+      <a href="#about">About</a>
+      <a href="https://calendly.com/infrastrisis/makeready" class="btn-nav" target="_blank" rel="noopener">Book a Demo</a>
     </nav>
   </div>
 </header>
 
 <main id="main-content">
 
-<section class="hero" aria-label="Operational Risk Visibility">
+<section class="hero" aria-label="MakeReady">
   <svg class="hero-constellation" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
     <g stroke="#C8932A" stroke-width="1" fill="none" opacity="0.5">
       <line x1="80" y1="120" x2="300" y2="60"/><line x1="300" y1="60" x2="520" y2="180"/>
@@ -198,174 +163,28 @@
     </g>
   </svg>
   <div class="wrap">
-    <span class="kicker">infraSTRISIS™ Labs</span>
-    <h1>Operational Risk Visibility</h1>
-    <p class="hero-sub">See where execution is slowing before it becomes an expensive problem.</p>
-    <p>infraSTRISIS™ helps scaling organizations identify hidden operational risk, decision bottlenecks, and structural gaps through a focused Operations Audit.</p>
-    <p>The goal is simple: give leadership the visibility to decide what needs attention, what can wait, and what should move next.</p>
+    <span class="kicker">MakeReady by infraSTRISIS™ Labs</span>
+    <h1>Voice to work order, for on-site maintenance teams.</h1>
+    <p class="hero-sub">Book a demo to see it work.</p>
+    <p class="hero-for">Built for multifamily operators running on-site maintenance.</p>
     <div class="cta-row">
-      <a href="https://calendly.com/infrastrisis/audit" class="btn-primary" target="_blank" rel="noopener">Request a Diagnostic Conversation</a>
-    </div>
-    <p>We will determine whether an Operations Audit, a narrower diagnostic, or a different starting point fits your situation.</p>
-  </div>
-</section>
-
-<section id="who" aria-label="Who It's For">
-  <div class="wrap">
-    <div class="gold-rule"></div>
-    <h2>Who It's For</h2>
-    <p>infraSTRISIS is built for organizations with enough complexity to feel the drag, but not enough internal visibility to see exactly where it starts.</p>
-    <p>This often looks like organizations with 100 to 2,000 employees, growing teams, cross-functional work, stretched leadership, and operational patterns that keep repeating without a clear owner.</p>
-    <p style="color: var(--white); font-weight: 600;">Work is happening. People are trying. Meetings are full. Priorities are active.</p>
-    <p style="color: var(--white); font-weight: 600;">But something is still slowing execution.</p>
-    <p>The Operations Audit is for leaders who can feel the friction, but need a clearer view of what's creating it.</p>
-  </div>
-</section>
-
-<section id="reveals" class="panel" aria-label="What the Audit Reveals">
-  <div class="wrap">
-    <div class="gold-rule"></div>
-    <h2>What the Audit Reveals</h2>
-    <p>The Operations Audit is a structured diagnostic for Operational Risk Visibility.</p>
-    <p>It's designed to surface the patterns underneath execution drag, not just the symptoms at the surface.</p>
-    <p>The audit looks for signals such as:</p>
-    <div class="signal-grid">
-      <div class="signal">Decision bottlenecks</div>
-      <div class="signal">Process drift</div>
-      <div class="signal">Role confusion</div>
-      <div class="signal">Knowledge gaps</div>
-      <div class="signal">Repeated escalations</div>
-      <div class="signal">Handoff breakdowns</div>
-      <div class="signal">Frontline support strain</div>
-      <div class="signal">Governance gaps</div>
-      <div class="signal">Tooling and workflow friction</div>
-      <div class="signal">Risks hidden inside workarounds</div>
-    </div>
-    <p>The outcome isn't a longer list of problems.</p>
-    <p style="color: var(--white); font-weight: 600;">It's a clearer view of what's creating avoidable drag and what leadership can do about it.</p>
-  </div>
-</section>
-
-<section id="receive" aria-label="What You Receive">
-  <div class="wrap">
-    <div class="gold-rule"></div>
-    <h2>What You Receive</h2>
-    <p>Every Operations Audit is built to move leadership from uncertainty to decision.</p>
-    <p>You walk away with:</p>
-    <ul class="deliverables">
-      <li>A clear view of what's slowing execution</li>
-      <li>A clear sense of which risks matter first</li>
-      <li>A 30 to 90 day action path</li>
-      <li>The confidence to decide instead of guess</li>
-    </ul>
-    <p>Not every issue needs attention at once.</p>
-    <p style="color: var(--white); font-weight: 600;">The value is knowing what matters first.</p>
-  </div>
-</section>
-
-<section id="why" class="panel" aria-label="Why infraSTRISIS Sees What Others Miss">
-  <div class="wrap">
-    <div class="gold-rule"></div>
-    <h2>Why infraSTRISIS Sees What Others Miss</h2>
-    <p>Most operational risk doesn't appear as one obvious failure.</p>
-    <p>It appears as repeat confusion, delayed decisions, quiet workarounds, uneven handoffs, preventable escalations, and teams absorbing friction the system never named.</p>
-    <p style="color: var(--white); font-weight: 600;">infraSTRISIS was built from 15+ years across HR, healthcare, SaaS, GovCon, and operations.</p>
-    <p>That background matters because operational risk rarely stays inside one department. It moves through people systems, process systems, technology systems, compliance expectations, leadership decisions, and the informal ways work actually gets done.</p>
-    <p style="color: var(--white); font-weight: 600;">We ran the diagnostic on ourselves first.</p>
-    <p>It found the kind of structural fracture the method is built to surface: a place where good work depended on too much invisible effort.</p>
-    <p>That experience sharpened the standard we bring to clients.</p>
-    <p class="thesis">We do not ask organizations to name risk we are unwilling to examine in our own.</p>
-  </div>
-</section>
-
-<section id="how" aria-label="How the Audit Works">
-  <div class="wrap">
-    <div class="gold-rule"></div>
-    <h2>How the Audit Works</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div>
-          <h3>Feasibility Gate</h3>
-          <p>Before scheduling an audit, we confirm three things:</p>
-          <ul>
-            <li>The business problem is real enough to matter.</li>
-            <li>The evidence needed for the audit is available.</li>
-            <li>Leadership has enough capacity or authority to act on what the audit reveals.</li>
-          </ul>
-          <p>If the engagement doesn't pass those gates, we pause, narrow the scope, or recommend a better starting point.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div>
-          <h3>Intake and Evidence Review</h3>
-          <p>We gather context around the operating issue, the people involved, the workflows affected, and the decisions leadership needs to make.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div>
-          <h3>Diagnostic Analysis</h3>
-          <p>We examine the evidence for structural patterns, friction points, visibility gaps, and operational risk signals.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div>
-          <h3>A Clear Written Picture</h3>
-          <p>You receive a clear summary of what's slowing execution, what risks are most important, and what decisions should come next.</p>
-        </div>
-      </div>
-      <div class="step">
-        <div class="step-num">5</div>
-        <div>
-          <h3>Decision Support</h3>
-          <p>The audit closes with a practical action path so leadership can decide what to address first, what to monitor, and what to defer.</p>
-        </div>
-      </div>
+      <a href="https://calendly.com/infrastrisis/makeready" class="btn-primary" target="_blank" rel="noopener">Book a Demo</a>
     </div>
   </div>
 </section>
 
-<section class="proof-band" aria-label="Proof Spine">
-  <svg class="hero-constellation" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true" style="opacity:0.08;">
-    <g stroke="#C8932A" stroke-width="1" fill="none" opacity="0.5">
-      <line x1="100" y1="300" x2="400" y2="100"/><line x1="400" y1="100" x2="700" y2="260"/>
-      <line x1="700" y1="260" x2="1000" y2="120"/><line x1="400" y1="100" x2="1000" y2="120"/>
-    </g>
-    <g fill="#D9AE5F">
-      <circle cx="100" cy="300" r="3"/><circle cx="400" cy="100" r="3"/><circle cx="700" cy="260" r="3"/><circle cx="1000" cy="120" r="3"/>
-    </g>
-  </svg>
+<section id="about" class="proof-band" aria-label="About">
   <div class="wrap">
-    <span class="kicker">Proof Spine</span>
     <p class="proof-statement">infraSTRISIS is grounded in real operating environments, not theory.</p>
     <p>The work is built from direct experience across HR operations, healthcare recruiting and implementation support, SaaS client environments, GovCon-adjacent work, systems redesign, compliance readiness, and distributed workforce support.</p>
-    <p>The pattern across those environments is consistent:</p>
-    <p style="color: var(--white); font-weight: 600;">When organizations can't see where risk is accumulating, they spend more time reacting to symptoms than resolving the structure underneath them.</p>
-    <p class="proof-close">Operational Resilience begins with Operational Risk Visibility.</p>
   </div>
 </section>
 
-<section class="panel" aria-label="Early Signals" style="padding: 72px 0;">
+<section class="final-cta" id="contact" aria-label="Book a Demo">
   <div class="wrap">
-    <span class="kicker">Early Signals</span>
-    <h2 style="font-size: clamp(24px, 3vw, 32px);">What the first people in the room said.</h2>
-    <div class="signal-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
-      <div class="signal" style="border-left-color: var(--gold); font-style: italic; padding: 22px 24px;">"Your passion for others is evident."<br><span style="font-style: normal; color: var(--text-muted); font-size: 13px; display: block; margin-top: 10px;">Former CEO &amp; Entrepreneur</span></div>
-      <div class="signal" style="border-left-color: var(--gold); font-style: italic; padding: 22px 24px;">"This kind of work has always been a part of who I am."<br><span style="font-style: normal; color: var(--text-muted); font-size: 13px; display: block; margin-top: 10px;">Legal Professional</span></div>
-      <div class="signal" style="border-left-color: var(--gold); font-style: italic; padding: 22px 24px;">"I am excited and support your mission."<br><span style="font-style: normal; color: var(--text-muted); font-size: 13px; display: block; margin-top: 10px;">Advisor</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="final-cta" id="contact" aria-label="Start Your Operations Audit">
-  <div class="wrap">
-    <p class="final-lines">Something is slowing execution.<br>You may not need a full transformation.<br><span class="gold">You may need visibility first.</span></p>
-    <p>Start with the Operations Audit and get a clearer view of the structural risks, decision bottlenecks, and execution friction your organization can't afford to keep guessing at.</p>
+    <p class="final-lines">See it run on a real work order.<br><span class="gold">Bring one from your properties.</span></p>
     <div class="cta-row">
-      <a href="https://calendly.com/infrastrisis/audit" class="btn-primary" target="_blank" rel="noopener">Request a Diagnostic Conversation</a>
+      <a href="https://calendly.com/infrastrisis/makeready" class="btn-primary" target="_blank" rel="noopener">Book a Demo</a>
     </div>
     <p>Prefer email? Reach us directly at <a href="mailto:info@infrastrisis.com">info@infrastrisis.com</a>.</p>
   </div>
@@ -376,8 +195,6 @@
 <footer>
   <div class="wrap footer-inner">
     <nav aria-label="Footer navigation">
-      <a href="#who">Who It's For</a>
-      <a href="/services">Services</a>
       <a href="/terms">Terms</a>
       <a href="mailto:info@infrastrisis.com">Contact</a>
     </nav>
